@@ -13,6 +13,8 @@ if (other.already_hit == false) {
     // Code to reduce the dummy's health
     //charHealth -= other.damage;
     other.already_hit = true; // The arrow has now dealt damage and should not deal more
+	//play the breaking effect
+	audio_play_sound(snd_arrowBreak_heavy, 1, false, .5, 0, 1.5);
 	//destroy it
 	with(other) {
 		var arrowX = other.x;

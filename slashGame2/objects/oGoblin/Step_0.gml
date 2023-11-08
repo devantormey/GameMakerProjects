@@ -80,7 +80,8 @@ if(first_shot && aggro){
 	//var arrowY = y + lengthdir_y(30, dir);
 	var arrowX = x + lengthdir_x(32, dir);
 	var arrowY = y + centerYOffset + lengthdir_y(32, dir);
-
+	
+	audio_play_sound(snd_crossbow_shoot, 1, false, .9, 0, 1);
     var proj = instance_create_layer(arrowX, arrowY, "Instances", oArrow);
 	proj.owner = id;
 	
@@ -111,6 +112,7 @@ if (shoot_timer <= 0 && aggro) {
     proj.speed = 3; // Set the projectile's speed
     
     // Add any additional code for the shooting effect, sound, etc.
+	audio_play_sound(snd_crossbow_shoot, 1, false, .9, 0, 1);
 }
 
 if (oPlayer.attacking == false){

@@ -6,6 +6,9 @@ if (m_already_hit == false && other.swingingFlag == true) {
 	//other.speed = 0;	
     // Code to reduce the dummy's health
     charHealth -= other.damage;
+	if (charHealth > 0) {
+		audio_play_sound(snd_sword_slash, 1, false);
+	}
 	var bloodEffect = instance_create_layer(x, y + centerYOffset, "Instances", oBloodSpurt);
 	bloodEffect.image_angle = other.image_angle;
     m_already_hit = true; //the swing should only damage once per swing
@@ -21,6 +24,7 @@ if(m_already_hit == true && other.swingingFlag == false){
 }
 
 if (charHealth <= 0){
+	audio_play_sound(snd_sword_kill, 1, false);
 	m_already_hit = false;
 	//other.lifespan=0; Only for arrows
 	//other.m_already_hit = true;

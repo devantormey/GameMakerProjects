@@ -33,9 +33,11 @@ sprintKey = keyboard_check_pressed(vk_shift)
 	var _vertKey = downKey - upKey;
 	movDir = point_direction(0,0,_horizKey,_vertKey);
 	
+	var walkTiming = .4;
 	//check sprinting
 	if (keyboard_check(vk_shift)) {
 		movSpd = 2;
+		walkTiming = .25;
 	}else{
 		movSpd = 1;
 	}
@@ -79,10 +81,17 @@ sprintKey = keyboard_check_pressed(vk_shift)
 	if((abs(xspeed) + abs(yspeed)) != 0)
 	{
 		sprite_index = walkSprite[face];
+		if (!footstep_sound_is_playing) {
+	        play_footstep_sound();
+	        footstep_sound_is_playing = true;
+	        alarm[2] = room_speed * walkTiming; // Adjust the timing as necessary
+		}
+		
 	}
 	else
 	{
-		sprite_index = B_sprite[face];		
+		sprite_index = B_sprite[face];	
+		footstep_sound_is_playing = false;
 	}
 	
 	
@@ -110,6 +119,7 @@ if (mouse_check_button_pressed(mb_left)) {
     if (!attacking) {
         attacking = true;
 		primaryAttack = true;
+		play_swing_sound();
 		//attack_angle_start = point_direction(x, y, mouse_x, mouse_y) + startOffset; // Starting angle 45 degrees behind the mouse direction
 		//attack_angle_end = attack_angle_start + endOffset; // Creates a 90-degree arc
 	

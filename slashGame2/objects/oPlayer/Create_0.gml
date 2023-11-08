@@ -111,3 +111,7 @@ bobbingUp = true; // This indicates if the bob is going up or down
 bobOffset = 0; // This will be either 1 or -1 pixel
 alarm[0] = game_get_speed(gamespeed_fps) * 1; // Set the alarm to go off after 2 seconds
 
+
+// In the Player's Create event
+footstep_sound_is_playing = false;
+global.footstep_toggle = false; // Also ensure this global variable is initialized

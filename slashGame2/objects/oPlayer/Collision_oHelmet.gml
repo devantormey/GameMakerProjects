@@ -22,8 +22,10 @@ if (currentItemCount < inventorySlots){
 		currentHelm_array = other.helmArray;
 		other.isEquiped = true;
 		inventoryArray[currentItemCount-1].isEquipped = true;
+		audio_play_sound(snd_item_pickup_1, 1, false, .8, 0, 1.2);
 	}else{
 		inventoryArray[currentItemCount-1].isEquipped = false;
+		audio_play_sound(snd_item_pickup_2, 1, false, .8, 0, 1.2);
 	}
 }
 
