@@ -22,6 +22,8 @@ takenFlag = false;
 
 isEquiped = false;
 
+name = "Leather Helm"
+
 
 
 

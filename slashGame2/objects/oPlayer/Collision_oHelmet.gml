@@ -32,6 +32,6 @@ if (currentItemCount < inventorySlots){
 //show_debug_message( "current item update: " + string(inventoryArray[currentItemCount-1])  );
 //show_debug_message("Current Item Count:" + string(currentItemCount))
 
-armor += other.armor;
+if (other.isEquiped){armor += other.armor;}
 
 other.takenFlag = true;

@@ -16,6 +16,11 @@
 	//positionsX[0] = 0;
 	//positionsY[0] = 0;
 depth = oPlayer.depth - 4;
+
+//
+hoveredItemName = "";
+hoveredItem = noone;
+
 //Set up some variables for assigning inventory coordinates
 	yInv_start = 160;
 	currentX = 32;
@@ -70,5 +75,7 @@ x = cam_x + offset_x; // X start position of the health bar
 y = cam_y + offset_y; // Y start position of the health bar
 
 
-
+inventoryBackColor = make_color_rgb(216, 186, 125); // A purplish color
+inventoryDarkBrown = make_color_rgb(51, 30, 9); // A purplish color
+inventoryLightBrown = make_color_rgb(255, 238, 204); // A purplish color
 

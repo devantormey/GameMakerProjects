@@ -87,6 +87,8 @@ sword.type = 0;
 sword.isEquipped = true;
 inventoryArray[0] = sword;
 
+currentSword = sword;
+
 
 // Sword Variables ~~~~~~~~~~~~~~~~~~~~~~~~~
 leftMouseWasPressed = false;
@@ -109,7 +111,8 @@ if (!instance_exists(oInventory)) {
 // In the Create event
 bobbingUp = true; // This indicates if the bob is going up or down
 bobOffset = 0; // This will be either 1 or -1 pixel
-alarm[0] = game_get_speed(gamespeed_fps) * 1; // Set the alarm to go off after 2 seconds
+bobRate = .4;
+alarm[0] = game_get_speed(gamespeed_fps) * bobRate; // Set the alarm to go off after 2 seconds
 
 
 // In the Player's Create event

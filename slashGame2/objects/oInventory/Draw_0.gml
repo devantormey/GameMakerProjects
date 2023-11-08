@@ -72,7 +72,64 @@ if(openInv){
 			
 		}
 	}
-	
+	// Draw GUI event of the inventory object
+	if (hoveredItemName != "") {
+		//Draw the Name of the item
+		var drawX = x + 33;
+		var drawY = y + 140;
+	    // Draw the item name
+		draw_set_color(inventoryDarkBrown);
+	    draw_text(drawX, drawY, hoveredItemName);
+		
+		//display the items stats
+		drawX = mouse_x + 14 // Offset so it doesn't draw right under the mouse
+	    drawY = mouse_y - 5;
+		// Calculate the position and padding for the rectangle
+		var rectX = drawX - 4; // 4 pixels padding on the left side
+		var rectY = drawY - 4; // 4 pixels padding on the top side
+		var rectWidth = 0; // Total padding on both sides
+		var rectHeight = 0; //
+		
+		if(hoveredItem != noone) {
+			draw_set_font(fnt_small);			
+			var printString = "";
+			var textWidth = 0;
+			var textHeight = 0;
+			switch(hoveredItem.type) {
+							case 0:
+								printString = "Dmg: " + string(hoveredItem.primaryDamage);
+								textWidth = string_width(printString);
+								textHeight = string_height(printString);
+								rectWidth = textWidth + 5; // Total padding on both sides
+								rectHeight = textHeight + 5; //
+								break;
+							case 1:
+								printString = "Armor: " + string(hoveredItem.armor);
+								textWidth = string_width(printString);
+								textHeight = string_height(printString);
+								rectWidth = textWidth + 5; // Total padding on both sides
+								rectHeight = textHeight + 5; //
+								break;
+							case 2:
+								printString = "Armor: " + string(hoveredItem.armor);
+								textWidth = string_width(printString);
+								textHeight = string_height(printString);
+								rectWidth = textWidth + 5; // Total padding on both sides
+								rectHeight = textHeight + 5; //
+								break;
+			}
+			
+			// Draw the rectangle
+			draw_set_color(inventoryLightBrown); // Set color for the rectangle
+			draw_rectangle(rectX, rectY, rectX + rectWidth, rectY + rectHeight, false);
+			draw_set_color(c_black);
+			draw_text(drawX, drawY, printString);
+		}
+		draw_set_color(c_black);
+		draw_set_font(fnt_default);
+	}
+
+
 }
 
 

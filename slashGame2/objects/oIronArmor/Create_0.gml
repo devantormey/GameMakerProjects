@@ -23,4 +23,5 @@ takenFlag = false;
 
 isEquiped = false;
 
+name = "Iron Armor"
 

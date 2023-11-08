@@ -17,6 +17,9 @@ equippedSprite = SimpleHelm_equip;
 armor = 20;
 
 type = 1;
+
 takenFlag = false;
 
 isEquiped = false;
+
+name = "Iron Helm"

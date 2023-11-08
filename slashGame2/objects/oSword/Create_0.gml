@@ -24,3 +24,5 @@ fastDammage = 50;
 //this will toggle between slow and fast according to player input.
 damage = 0;
 prev_mouse_angle = point_direction(x, y, mouse_x, mouse_y);
+
+name = "Iron Sword";

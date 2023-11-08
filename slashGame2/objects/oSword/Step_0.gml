@@ -7,6 +7,13 @@ if(Control.gameOver == true){
 //if we are paused dont do nothin!
 if(Control.gamePaused == true){return;}
 
+
+if (isEquipped = false) {
+	visible = false;
+    solid = false;
+	return;
+}
+
 var current_mouse_angle = point_direction(x, y + swordYOffset, oCursor.x, oCursor.y);
 
 var angular_change = current_mouse_angle - prev_mouse_angle;
@@ -14,7 +21,7 @@ var angular_change = current_mouse_angle - prev_mouse_angle;
 // Ensure that angular_change is between -180 and 180 degrees
 
 angular_change = (angular_change + 180) mod 360 - 180;
-show_debug_message("Angular Change: " + string(angular_change))
+//show_debug_message("Angular Change: " + string(angular_change))
 
 //clamp the angular change so the swing doesn't get crazy
 angular_change = clamp(angular_change,-45,45);

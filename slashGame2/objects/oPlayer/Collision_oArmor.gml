@@ -23,7 +23,8 @@ if (currentItemCount < inventorySlots){
 	}
 }
 
-armor += other.armor;
+if (other.isEquiped){armor += other.armor;}
+
 
 other.takenFlag = true;
 
