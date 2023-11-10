@@ -111,11 +111,11 @@ if (currentSword != noone){
 
 
 	// Assuming you have a reference to your sword instance stored in a variable 'sword'
-	var sword = instance_nearest(x, y, oSword);
+	var sword = instance_nearest(x, y, oBladeWeapon);
 	if(face < 0 || face > 4){
-		sword.depth = oPlayer.depth - 1;
+		currentSword.depth = oPlayer.depth - 1;
 	}else{
-		sword.depth = oPlayer.depth + 1;
+		currentSword.depth = oPlayer.depth + 1;
 	}
 
 	var startOffset = 45;
@@ -155,6 +155,13 @@ charHealth = clamp(charHealth, 0, max_health);
 armor = clamp(armor,0,100);
 
 //show_debug_message("Current Armor: " + string(armor));
-
-
-
+if(Control.currentItemPlayerIsTouching != noone){
+	if(place_meeting(x,y,Control.currentItemPlayerIsTouching)){
+		Control.standingOnItem = true;
+	}else{
+		Control.standingOnItem = false;
+		Control.currentItemPlayerIsTouching = noone;
+	}
+}else{
+	Control.standingOnItem = false;
+}

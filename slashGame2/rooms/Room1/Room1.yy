@@ -19,6 +19,7 @@
     {"name":"inst_3480002D","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_453451B9","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_303653F8","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_12C164FA","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -30,6 +31,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3480002D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oIronArmor","path":"objects/oIronArmor/oIronArmor.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":594.0,"y":198.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_453451B9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oWall","path":"objects/oWall/oWall.yy",},"properties":[],"rotation":0.0,"scaleX":19.0,"scaleY":13.375,"x":738.0,"y":297.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_303653F8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oLeatherHelm","path":"objects/oLeatherHelm/oLeatherHelm.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":657.0,"y":99.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_12C164FA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oIronAxe","path":"objects/oIronAxe/oIronAxe.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":477.0,"y":297.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"FoliageInstances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7B16C24E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oRock","path":"objects/oRock/oRock.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":64.0,},

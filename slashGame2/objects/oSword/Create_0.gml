@@ -20,7 +20,7 @@ equippedSprite = sword_equip;
 
 primaryDamage = 50;
 fastDammage = 50;
-
+owner = noone;
 //this will toggle between slow and fast according to player input.
 damage = 0;
 prev_mouse_angle = point_direction(x, y, mouse_x, mouse_y);

@@ -4,6 +4,7 @@
 
 //if we are paused dont do nothin!
 if(Control.gamePaused == true){return;}
+if(Control.gameOver == true){return;}
 
 shoot_timer -= 1;
 

@@ -83,12 +83,23 @@ if (!instance_exists(oSword)) {
     sword.owner = id; // This ensures the sword knows who its owner is
 }
 
+
+var axe = instance_create_layer(x, y, "Instances", oIronAxe);
+axe.owner = id; // This ensures the sword knows who its owner is
+
+
 sword.type = 0;
 sword.isEquipped = true;
 inventoryArray[0] = sword;
 
+
 currentSword = sword;
 
+axe.type = 0;
+axe.isEquipped = false;
+//axe.owner = id;
+inventoryArray[1] = axe;
+currentItemCount = 2;
 
 // Sword Variables ~~~~~~~~~~~~~~~~~~~~~~~~~
 leftMouseWasPressed = false;
@@ -118,3 +129,6 @@ alarm[0] = game_get_speed(gamespeed_fps) * bobRate; // Set the alarm to go off a
 // In the Player's Create event
 footstep_sound_is_playing = false;
 global.footstep_toggle = false; // Also ensure this global variable is initialized
+
+fontRed = make_color_rgb(178, 12, 16);
+fontGray = make_color_rgb(85, 85, 85);

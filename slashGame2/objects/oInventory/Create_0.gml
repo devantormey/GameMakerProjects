@@ -3,7 +3,7 @@
 
 // Information about how much we can store
 	maxNumber_items = 21;
-	inventoryArray = [];
+	inventoryArray = oPlayer.inventoryArray;
 	
 	positionsX = [];
 	positionsY = [];

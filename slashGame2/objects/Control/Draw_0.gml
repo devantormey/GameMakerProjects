@@ -21,6 +21,12 @@ if (gameOver) {
     draw_text(_text_x, _text_y, "Continue?\n Y/N");
 }
 
+if(standingOnItem){
+	draw_set_color(c_white);
+	draw_set_font(fnt_default);
+	draw_text(oPlayer.x + 5, oPlayer.y - 10,"Loot [F]");	
+}
+
 
 
 

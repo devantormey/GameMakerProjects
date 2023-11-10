@@ -47,6 +47,7 @@ if (charHealth==0){
 	bloodEffect.image_angle = arrowAngle;
 	
 	gameOverFlag = true;
+	if (currentSword != noone){currentSword.visible = false;}
 	
 	//game_end();
 }

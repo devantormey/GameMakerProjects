@@ -9,6 +9,14 @@ if(Control.gamePaused == true){
 else{
 	speed = 3;
 }
+if(Control.gameOver == true){
+	speed = 0 
+	return;
+}
+else{
+	speed = 3;
+}
+
 
 // Increment the life counter
 current_life += 1;

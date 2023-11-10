@@ -22,6 +22,7 @@ if(openInv){
 	var mouseX = mouse_x;
 	var mouseY = mouse_y;
 	
+	// check for equiping and unequiping in the inventory
 	if (mouse_check_button_pressed(mb_left)) {
 	    // Get the mouse coordinates
 	    
@@ -63,7 +64,14 @@ if(openInv){
 	                if (inventoryArray[i].isEquipped) {
 			            switch(item.type) {
 							case 0:
-								oPlayer.currentSword = item;
+								if (oPlayer.currentSword == noone){
+										oPlayer.currentSword = item;
+										equipFlag = false;
+									}else{
+										equipFlag = true;
+										inventoryArray[i].isEquipped = false;
+									}
+								
 								break;
 							case 1:
 								if (oPlayer.currentHelm == noone){
@@ -120,11 +128,11 @@ if(openInv){
 	
 	// let's figure out if we are hovering over an item
 	for (var i = 0; i < oPlayer.currentItemCount; i++) {
-	    // Determine the boundaries of the current slot
-	    var slotXStart = x  + positionsX[i];
-	    var slotXEnd = slotXStart + 32; // Assuming you have an inventory slot sprite
-	    var slotYStart = y + positionsY[i];
-	    var slotYEnd = slotYStart + 32;
+		// Determine the boundaries of the current slot
+		var slotXStart = x  + positionsX[i];
+		var slotXEnd = slotXStart + 32; // Assuming you have an inventory slot sprite
+		var slotYStart = y + positionsY[i];
+		var slotYEnd = slotYStart + 32;
 	
 		if (mouseX >= slotXStart && mouseX <= slotXEnd && mouseY >= slotYStart && mouseY <= slotYEnd) {							
 			if (inventoryArray[i] != noone) {
@@ -135,14 +143,61 @@ if(openInv){
 		}
 		
 		}
-		if ( mouseX < (x + positionsX[0]) || mouseX > (x + positionsX[oPlayer.currentItemCount]) || mouseY < (y + positionsY[0]) ||  mouseY > (y + positionsY[oPlayer.currentItemCount] + 32) ) {
-			hoveredItemName = "";
-			hoveredItem = noone;
+	if ( mouseX < (x + positionsX[0]) || mouseX > (x + positionsX[oPlayer.currentItemCount]) || mouseY < (y + positionsY[0]) ||  mouseY > (y + positionsY[oPlayer.currentItemCount] + 32) ) {
+		hoveredItemName = "";
+		hoveredItem = noone;
+	}
+	
+	if (mouse_check_button_pressed(mb_left)) {
+		//Allow unequip from weapon slot
+		if(oPlayer.currentSword != noone){
+			if (mouseX >= x + weaponEquipedX && mouseX <= x + weaponEquipedX + 42 && mouseY >= y + weaponEquipedY && mouseY <= y + weaponEquipedY + 63 ) {
+				var current_weapon = oPlayer.currentSword;
+				for (var i = 0; i < oPlayer.currentItemCount; i++) {
+					if(current_weapon.id == inventoryArray[i].id){
+						inventoryArray[i].isEquipped = false;
+						oPlayer.inventoryArray[i].isEquipped = false;
+					}
+				}
+				oPlayer.currentSword = noone;
+			}
 		}
+		//Allow unequip from armor slot
+		if(oPlayer.currentArmor != noone){
+			if (mouseX >= x + armorEquipedX && mouseX <= x + armorEquipedX + 42 && mouseY >= y + armorEquipedY && mouseY <= y + armorEquipedY + 32 ) {
+				var current_armor = oPlayer.currentArmor;
+				for (var i = 0; i < oPlayer.currentItemCount; i++) {
+					if(current_armor.id == inventoryArray[i].id){
+						inventoryArray[i].isEquipped = false;
+						oPlayer.inventoryArray[i].isEquipped = false;
+						oPlayer.armor -= current_armor.armor;
+					}
+				}
+				oPlayer.currentArmor = noone;
+			}
+		}
+		//Allow unequip from helm slot
+		if(oPlayer.currentHelm != noone){
+			if (mouseX >= x + helmEquipedX && mouseX <= x + helmEquipedX + 42 && mouseY >= y + helmEquipedY && mouseY <= y + helmEquipedY + 32 ) {
+				var current_helm = oPlayer.currentHelm;
+				for (var i = 0; i < oPlayer.currentItemCount; i++) {
+					if(current_helm.id == inventoryArray[i].id){
+						inventoryArray[i].isEquipped = false;
+						oPlayer.inventoryArray[i].isEquipped = false;
+						oPlayer.armor -= current_helm.armor;
+					}
+				}
+				oPlayer.currentHelm = noone;
+			}
+		}
+	}
+	
+	oPlayer.inventoryArray = inventoryArray;
+	
 }
 
 
-//i know this works 
+
 
 
 
