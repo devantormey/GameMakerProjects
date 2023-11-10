@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Armor",
-    "path": "folders/Sprites/Armor.yy",
+    "name": "Iron Armor",
+    "path": "folders/Sprites/Armor/Iron Armor.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

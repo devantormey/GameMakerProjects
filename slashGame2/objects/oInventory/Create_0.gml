@@ -12,6 +12,7 @@
 	rows = 3;
 	
 	openInv = false;
+	lootingInv = false;
 
 	//positionsX[0] = 0;
 	//positionsY[0] = 0;

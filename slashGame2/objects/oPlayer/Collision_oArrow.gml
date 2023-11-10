@@ -13,7 +13,9 @@ if (other.already_hit == false) {
 	other.wiggle_time = 2; // Set how long the wiggle will last (30 steps, for example)
 	other.is_wiggling = true;
     // Code to reduce the dummy's health
-    charHealth -= (other.damage - (other.damage*(armor/100)));
+	var damage_taken = (other.damage - (other.damage*(armor/100)));
+	damage_taken = floor(damage_taken);
+    charHealth -= damage_taken
 	show_debug_message("Took Damage Health is now: " + string(charHealth));
     other.already_hit = true; // The arrow has now dealt damage and should not deal more
 	arrowHit = true;
