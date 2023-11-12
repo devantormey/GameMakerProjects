@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Set Dressing",
-    "path": "folders/Sprites/Set Dressing.yy",
+    "name": "Walls",
+    "path": "folders/Sprites/Walls.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
