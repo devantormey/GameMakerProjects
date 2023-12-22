@@ -2,21 +2,19 @@
 // You can write your code in this editor
 
 // Information about how much we can store
-	maxNumber_items = 21;
-	inventoryArray = oPlayer.inventoryArray;
+maxNumber_items = 21;
+inventoryArray = oPlayer.inventoryArray;
 	
-	positionsX = [];
-	positionsY = [];
+positionsX = [];
+positionsY = [];
 
-	cols = 7;
-	rows = 3;
+cols = 7;
+rows = 3;
 	
-	openInv = false;
-	lootingInv = false;
+openInv = false;
+lootingInv = false;
 
-	//positionsX[0] = 0;
-	//positionsY[0] = 0;
-depth = oPlayer.depth - 4;
+depth = oPlayer.depth - 6;
 
 //
 hoveredItemName = "";
@@ -29,16 +27,16 @@ hoveredItem = noone;
 
 	
 	
-	for (var k = 1; k <= maxNumber_items; k++){
+	for (var k = 0; k < maxNumber_items; k++){
 	
 		//assign the x y coordinates starting at the 0th position
-		positionsX[k-1] = currentX;
-		positionsY[k-1] = currentY;
+		positionsX[k] = currentX;
+		positionsY[k] = currentY;
 		//move x over 32 pixels
 		currentX = currentX + 32;
 	
 		//we need to reset and update every row
-		if(k % 7 == 0){
+		if((k+1) % 7 == 0){
 			//update y
 			currentY = currentY + 32;
 			//reset  x

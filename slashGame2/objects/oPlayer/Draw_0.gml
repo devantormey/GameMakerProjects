@@ -1,11 +1,27 @@
-/// draws all of the items for player
+// This is the Draw event for our player
+
+
+// ~~~~~~~~~~~~~~~~~~ This is the shader code ~~~~~~~~~~~~~~~~~~~~~~
+//very unfinished
+////shader enable:
+//// Set the shader
+//shader_set(shd_simpleShadow);
+
+//// Draw the shadow slightly offset below the player
+//var shadowOffsetY = -8; // Adjust this value as needed
+//draw_sprite_ext(sprite_index, image_index, x, y + shadowOffsetY, image_xscale, image_yscale, 45, image_blend, image_alpha);
+
+//// Reset to the default shader
+//shader_reset();
+
+//~~~~~~~~~~~~ Begin Player Draw Code ~~~~~~~~~~~~~~~~~~
+
+/// draw the player
 draw_self();
 
-// Save the current depth
-//var original_depth = depth;
 
-// Set the depth to a lower value than the player's current depth to draw something above the player
-//depth = original_depth - 1;
+
+// ~~~~~~~~~~~~~ Set the armor and helmet sprite according to the mouse orientation ~~~~~~~~~~~~~~~~~~~
 if (face == 6){
 	if(currentArmor != noone){
 		draw_sprite(currentArmor_array[face], 0, x, y)
@@ -51,6 +67,28 @@ else {
 	draw_set_font(fnt_big);
 	draw_text(health_start + 42, offset_y + 2, charHealth);
 	draw_set_font(fnt_default);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -20,6 +20,6 @@ type = 1;
 
 takenFlag = false;
 
-isEquiped = false;
+isEquipped = false;
 
 name = "Iron Helm"

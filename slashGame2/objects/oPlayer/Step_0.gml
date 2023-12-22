@@ -20,12 +20,15 @@ if(Control.gameOver == true){
 //if we are paused dont do nothin!
 if(Control.gamePaused == true){return;}
 
+if(isLooting){return;}
+
 //get inputs
 upKey = keyboard_check(ord("W"));
 leftKey = keyboard_check(ord("A"));
 downKey = keyboard_check(ord("S"));
 rightKey = keyboard_check(ord("D"));
 sprintKey = keyboard_check_pressed(vk_shift)
+//sheathedWeapon = keyboard_check(ord("x"));
 
 // player movement
 	// get direction
@@ -99,7 +102,8 @@ sprintKey = keyboard_check_pressed(vk_shift)
 		bobRate = 1;
 	}
 	
-	
+
+
 // Sword Control Code ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if (currentSword != noone){
 	// Get the mouse position
@@ -118,8 +122,10 @@ if (currentSword != noone){
 		currentSword.depth = oPlayer.depth + 1;
 	}
 
+
 	var startOffset = 45;
 	var endOffset = -200;
+	
 
 	if (mouse_check_button_pressed(mb_left)) {
 	    if (!attacking) {
@@ -146,7 +152,8 @@ if (currentSword != noone){
 		} else {
 			//show_debug_message("Already attacking.");
 		}
-}	
+}
+
 // clamp our stats for each step 
 // note we also should modulate these numbers!
 

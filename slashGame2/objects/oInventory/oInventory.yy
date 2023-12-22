@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Inventory",
-    "path": "sprites/Inventory/Inventory.yy",
+    "name": "sPlayerInventory",
+    "path": "sprites/sPlayerInventory/sPlayerInventory.yy",
   },
   "spriteMaskId": null,
   "visible": true,

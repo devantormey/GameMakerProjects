@@ -6,6 +6,8 @@ if (m_already_hit == false && other.swingingFlag == true) {
 	//other.speed = 0;	
     // Code to reduce the dummy's health
     charHealth -= other.damage;
+	show_debug_message("health: "+ string(charHealth));
+	show_debug_message("i just got hit for: " + string(other.damage));
 	if (charHealth > 0) {
 		audio_play_sound(snd_sword_slash, 1, false);
 	}

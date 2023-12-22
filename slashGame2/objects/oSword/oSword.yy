@@ -2,14 +2,12 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "oSword",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-  ],
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Weapons",
+    "path": "folders/Objects/Weapons.yy",
   },
   "parentObjectId": {
     "name": "oBladeWeapon",

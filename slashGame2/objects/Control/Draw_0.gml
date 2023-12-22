@@ -27,6 +27,8 @@ if(standingOnItem){
 	draw_text(oPlayer.x + 5, oPlayer.y - 10,"Loot [F]");	
 }
 
+//draw_surface(light_surface, 0, 0);
+
 
 
 

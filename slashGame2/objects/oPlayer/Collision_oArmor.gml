@@ -16,7 +16,7 @@ if(keyboard_check(ord("F"))){
 		if (currentArmor == noone){
 			currentArmor = other;
 			currentArmor_array = other.ArmorArray;
-			other.isEquiped = true;
+			other.isEquipped = true;
 			inventoryArray[currentItemCount-1].isEquipped = true;
 			audio_play_sound(snd_item_pickup_1, 1, false, .8, 0, 1.2);
 		}else{
@@ -25,7 +25,7 @@ if(keyboard_check(ord("F"))){
 		}
 	}
 
-	if (other.isEquiped){armor += other.armor;}
+	if (other.isEquipped){armor += other.armor;}
 
 
 	Control.standingOnItem = false;

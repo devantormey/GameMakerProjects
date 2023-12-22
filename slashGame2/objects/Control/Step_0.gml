@@ -29,4 +29,13 @@ if(gameOver == true ){
 	}
 }
 
-if(gamePaused){window_set_cursor(cr_handpoint);}else{window_set_cursor(cr_none);}
+if(gamePaused || lootingChest ){window_set_cursor(cr_handpoint);}else{window_set_cursor(cr_none);}
+
+if(lootingChest){
+	oInventory.lootingInv = true;
+	window_set_cursor(cr_handpoint);
+	
+}else{
+	oInventory.lootingInv = false;
+	//window_set_cursor(cr_none);
+}

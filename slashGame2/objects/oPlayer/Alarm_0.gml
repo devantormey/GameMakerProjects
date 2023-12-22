@@ -1,4 +1,4 @@
-/// @event to bob head down
+/// @description to bob head down
 // You can write your code in this editor
 // In the Alarm[0] event
 // In the Alarm[0] event

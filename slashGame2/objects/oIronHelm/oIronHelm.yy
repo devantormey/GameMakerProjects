@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Armor",
+    "path": "folders/Objects/Armor.yy",
   },
   "parentObjectId": {
     "name": "oHelmet",

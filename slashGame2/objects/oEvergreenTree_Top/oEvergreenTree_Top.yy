@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Exterior Decorations",
+    "path": "folders/Objects/Exterior Decorations.yy",
   },
   "parentObjectId": null,
   "persistent": false,

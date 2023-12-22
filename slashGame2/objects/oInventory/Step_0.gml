@@ -12,12 +12,34 @@ if (keyboard_check_pressed(vk_tab)) {
 	x = cam_x + offset_x; // X start position of the health bar
 	y = cam_y + offset_y; // Y start position of the health bar
 	
-    openInv = !openInv; // This toggles the boolean value
-    visible = openInv;  // This sets the visibility to the same value as openInv
-	Control.gamePaused = !Control.gamePaused;
+	if(lootingInv == false){
+	    openInv = !openInv; // This toggles the boolean value
+		visible = openInv;  // This sets the visibility to the same value as openInv
+		Control.gamePaused = !Control.gamePaused;
+	}else{
+		openInv = false;
+		//visible = lootingInv;
+	}
 }
 
 if(openInv){
+	
+	if(lootingInv){
+		// Get the camera's top-left corner position
+		
+		cam = view_camera[0];
+		cam_x = camera_get_view_x(cam);
+		cam_y = camera_get_view_y(cam);
+
+		offset_x = 10; // Offset from the camera view's edge
+		offset_y = 42; // Offset from the camera view's edge
+		x = cam_x + offset_x; // X start position of the health bar
+		y = cam_y + offset_y; // Y start position of the health bar
+		   
+	    visible = true;  // This sets the visibility to the same value as openInv
+		
+	}
+	
 	// First, determine if the mouse is being clicked
 	var mouseX = mouse_x;
 	var mouseY = mouse_y;
@@ -30,7 +52,7 @@ if(openInv){
 		show_debug_message( "you clicked!");
     
 	    // Loop through all inventory slots
-	    for (var i = 0; i < oPlayer.currentItemCount; i++) {
+	    for (var i = 0; i < array_length(inventoryArray); i++) {
 	        // Determine the boundaries of the current slot
 	        var slotXStart = x  + positionsX[i];
 	        var slotXEnd = slotXStart + 32; // Assuming you have an inventory slot sprite
@@ -127,13 +149,14 @@ if(openInv){
 	}
 	
 	// let's figure out if we are hovering over an item
-	for (var i = 0; i < oPlayer.currentItemCount; i++) {
+	for (var i = 0; i < array_length(inventoryArray); i++) {
 		// Determine the boundaries of the current slot
 		var slotXStart = x  + positionsX[i];
 		var slotXEnd = slotXStart + 32; // Assuming you have an inventory slot sprite
 		var slotYStart = y + positionsY[i];
 		var slotYEnd = slotYStart + 32;
 	
+		//check if it is in an assigned slot
 		if (mouseX >= slotXStart && mouseX <= slotXEnd && mouseY >= slotYStart && mouseY <= slotYEnd) {							
 			if (inventoryArray[i] != noone) {
 				hoveredItem = inventoryArray[i]
@@ -143,7 +166,13 @@ if(openInv){
 		}
 		
 		}
-	if ( mouseX < (x + positionsX[0]) || mouseX > (x + positionsX[oPlayer.currentItemCount]) || mouseY < (y + positionsY[0]) ||  mouseY > (y + positionsY[oPlayer.currentItemCount] + 32) ) {
+	//this line checks if we are hovering the mouse outside the possible bounds of current number of items in the inventory
+	// it is trying to be clever as oPlayer.currentItemCount is always going to be 1 greater than the last index in inventoryArray.
+	// we need to check if the mouse is hovering in a box drawn to the size of the number of items (not the index of the array) hope that makes sense
+	//sorry future devan
+	var checkIndex = oPlayer.currentItemCount;
+	if (checkIndex >= maxNumber_items ){ checkIndex = checkIndex - 1;}
+	if ( mouseX < (x + positionsX[0]) || mouseX > (x + positionsX[checkIndex]) || mouseY < (y + positionsY[0]) ||  mouseY > (y + positionsY[checkIndex] + 32) ) {
 		hoveredItemName = "";
 		hoveredItem = noone;
 	}
@@ -197,22 +226,7 @@ if(openInv){
 }
 
 
-if(lootingInv){
-	// Get the camera's top-left corner position
-	cam = view_camera[0];
-	cam_x = camera_get_view_x(cam);
-	cam_y = camera_get_view_y(cam);
 
-	offset_x = 180; // Offset from the camera view's edge
-	offset_y = 42; // Offset from the camera view's edge
-	x = cam_x + offset_x; // X start position of the health bar
-	y = cam_y + offset_y; // Y start position of the health bar
-	
-    openInv = !openInv; // This toggles the boolean value
-    visible = openInv;  // This sets the visibility to the same value as openInv
-	Control.gamePaused = !Control.gamePaused;
-
-}
 
 
 

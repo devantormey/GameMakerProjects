@@ -1,18 +1,29 @@
 // variables for movement
 //devan tormey
 //11/2/2023
+
+// Character Stats
+armor = 0;
 charHealth = 200;
 max_health = 200;
+
+// Game Flags
 gameOverFlag = false;
 gameOver_counter = 20;
+isLooting = false;
+
+// Character Sprite offsets
 headYoffset = -24
 
+
+
+//~~~~~~~~~~~~~ inventory Variables
 currentHelm = noone;
 currentArmor = noone;
 
 currentHelm_array = [];
 currentArmor_array = [];
-armor = 0;
+
 
 inventorySlots = 21;
 currentItemCount = 1;
@@ -21,13 +32,15 @@ inventoryArray = [];
 
 
 //movement controls ~~~~~~~~~~~~~~~~~~~~
-	movDir = 0;
-	movSpd = 1;
+movDir = 0;
+movSpd = 1;
 
-	xspeed = 0;
-	yspeed = 0;
-	
+xspeed = 0;
+yspeed = 0;
+
+// Arrow interaction Variables
 arrowHit = false;
+
 // Sprite Control ~~~~~~~~~~~~~~~~~~~~~~~~~~
 face = 0;
 H_sprite[0] = pH_IdleRight;
@@ -69,6 +82,8 @@ weaponYOffset = 2;
 arrowOffsetx = 3;
 arrowOffsety = 10;
 
+sheathedWeapon = false;
+
 distance_to_sword = 8;
 
 
@@ -101,6 +116,8 @@ axe.isEquipped = false;
 inventoryArray[1] = axe;
 currentItemCount = 2;
 
+//looting variables
+	//isLooting = false;
 // Sword Variables ~~~~~~~~~~~~~~~~~~~~~~~~~
 leftMouseWasPressed = false;
 

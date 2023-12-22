@@ -9,4 +9,4 @@ armor = 0;
 type = 1;
 takenFlag = false;
 
-isEquiped = false;
+isEquipped = false;
