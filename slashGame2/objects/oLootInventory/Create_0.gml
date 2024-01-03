@@ -22,6 +22,7 @@ itemSpawnList = [oIronArmor,oIronAxe,oIronHelm,oSword,oRangerHood,oLeatherArmor,
 if (itemSpawnCount > 0){
 	for(var k = 0; k < itemSpawnCount; k++;){
 		inventoryArray[k] = itemSpawnList[random_range(0,array_length(itemSpawnList))];
+		//inventoryArray[k] = oIronAxe; // for testing a single item
 		currentItemCount++;
 	}
 }

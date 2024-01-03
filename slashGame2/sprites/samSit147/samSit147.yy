@@ -31,8 +31,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Komoo",
+    "path": "folders/Sprites/Friendlies/Komoo.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

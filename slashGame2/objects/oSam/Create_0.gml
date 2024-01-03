@@ -10,3 +10,8 @@ xSpeed = 0;
 ySpeed = 0;
 
 walkDelay = 10;
+moveDelay = 10;
+flipDelay = 10;
+
+isPettable = false;
+isPetting = false;

@@ -7,7 +7,7 @@ var player_y = oPlayer.y - 18;
 //var mouse_y = mouse_y;
 
 // Set the restricted radius
-var restricted_radius = 30; // Change this value to whatever radius you want
+var restricted_radius = 40; // Change this value to whatever radius you want
 
 // Calculate the distance between the mouse and the player
 var distance_to_mouse = point_distance(player_x, player_y, mouse_x, mouse_y);

@@ -9,7 +9,7 @@ firstIterationFlag = true;
 swordYOffset = -14;
 maxAngularChange = 10;
 
-primaryAttack_speed = 5;
+primaryAttack_speed = 12;
 secondaryAttack_speed = 5;
 
 primaryAttack_counter = 90/primaryAttack_speed;
@@ -18,7 +18,7 @@ secondaryAttack_counter = 180/secondaryAttack_speed;
 inventorySprite = ironAxe_inv;
 equippedSprite = ironAxe_equip;
 
-primaryDamage = 100;
+primaryDamage = 50;
 fastDammage = 50;
 
 //this will toggle between slow and fast according to player input.

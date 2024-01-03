@@ -33,7 +33,9 @@ if (isOpen){
 					
 						show_debug_message( "moving item: " + string(current_item.name));
 						current_item.isEquipped = false;
-				
+						
+						//var objectType = current_item.object_index; 
+						current_item.owner = oPlayer.id;
 						oInventory.inventoryArray[playerItemIndex] = current_item;
 				
 						oPlayer.inventoryArray[playerItemIndex] = current_item;
@@ -43,7 +45,7 @@ if (isOpen){
 						indexToRemove = i;
 				
 						
-						instance_deactivate_object(current_item);
+						//instance_deactivate_object(current_item);
 						show_debug_message( string(currentItemCount) + " item(s) left in box.");
 					}
 			

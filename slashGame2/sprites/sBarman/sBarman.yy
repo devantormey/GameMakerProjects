@@ -34,8 +34,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "group1",
-    "path": "folders/Sprites/Friendlies/group1.yy",
+    "name": "villagers",
+    "path": "folders/Sprites/Friendlies/villagers.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

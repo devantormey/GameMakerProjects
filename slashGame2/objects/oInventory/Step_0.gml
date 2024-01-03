@@ -85,17 +85,26 @@ if(openInv){
 	                // If the item is now equipped, do something
 	                if (inventoryArray[i].isEquipped) {
 			            switch(item.type) {
-							case 0:
+							case 0: //weapon type
 								if (oPlayer.currentSword == noone){
-										oPlayer.currentSword = item;
-										equipFlag = false;
+									//in case you need to create an additional instance
+									//var objectType = item.object_index; 
+									
+									//set the current sword to this item (note item is just a pointer to the object)
+									oPlayer.currentSword = item;
+									
+									// just some house keeping, not sure if necessary, but making sure we know the state
+									oPlayer.currentSword.isEquipped = true;
+									oPlayer.currentSword.visible = true;
+									oPlayer.currentSword.solid = true;
+									equipFlag = false;
 									}else{
 										equipFlag = true;
 										inventoryArray[i].isEquipped = false;
 									}
 								
 								break;
-							case 1:
+							case 1: //helmet type
 								if (oPlayer.currentHelm == noone){
 									oPlayer.currentHelm = item;
 									oPlayer.currentHelm_array = item.helmArray;
@@ -107,7 +116,7 @@ if(openInv){
 									inventoryArray[i].isEquipped = false;
 								}
 								break;
-							case 2:
+							case 2: //armor type
 								if (oPlayer.currentArmor == noone){
 									oPlayer.currentArmor = item;
 									oPlayer.currentArmor_array = item.ArmorArray;
@@ -125,6 +134,7 @@ if(openInv){
 					if (inventoryArray[i].isEquipped == false && equipFlag == false) {
 			            switch(item.type) {
 							case 0:
+								oPlayer.currentSword.isEquipped = false;
 								oPlayer.currentSword = noone;
 								break;
 							case 1:

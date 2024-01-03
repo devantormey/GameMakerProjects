@@ -115,7 +115,7 @@ if (currentSword != noone){
 
 
 	// Assuming you have a reference to your sword instance stored in a variable 'sword'
-	var sword = instance_nearest(x, y, oBladeWeapon);
+	var sword = instance_nearest(x, y, oBladeWeapon_Complex);
 	if(face < 0 || face > 4){
 		currentSword.depth = oPlayer.depth - 1;
 	}else{

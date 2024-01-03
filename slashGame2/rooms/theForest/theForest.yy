@@ -41,6 +41,7 @@
     {"name":"inst_2E306B44","path":"rooms/theForest/theForest.yy",},
     {"name":"inst_79B55E1","path":"rooms/theForest/theForest.yy",},
     {"name":"inst_3BA3114B","path":"rooms/theForest/theForest.yy",},
+    {"name":"inst_11948173","path":"rooms/theForest/theForest.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -76,6 +77,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2E306B44","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oLeatherHelm","path":"objects/oLeatherHelm/oLeatherHelm.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":432.0,"y":135.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_79B55E1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oIronArmor","path":"objects/oIronArmor/oIronArmor.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":441.0,"y":117.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3BA3114B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oChest","path":"objects/oChest/oChest.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":540.0,"y":63.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_11948173","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oBandit","path":"objects/oBandit/oBandit.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":405.0,"y":234.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"buildings","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3A3A7FA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oTentLeft","path":"objects/oTentLeft/oTentLeft.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":640.0,"y":704.0,},
