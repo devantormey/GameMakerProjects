@@ -20,12 +20,15 @@ if(Control.gameOver == true){
 //if we are paused dont do nothin!
 if(Control.gamePaused == true){return;}
 
+if(isLooting){return;}
+
 //get inputs
 upKey = keyboard_check(ord("W"));
 leftKey = keyboard_check(ord("A"));
 downKey = keyboard_check(ord("S"));
 rightKey = keyboard_check(ord("D"));
 sprintKey = keyboard_check_pressed(vk_shift)
+//sheathedWeapon = keyboard_check(ord("x"));
 
 // player movement
 	// get direction
@@ -35,12 +38,18 @@ sprintKey = keyboard_check_pressed(vk_shift)
 	
 	var walkTiming = .4;
 	//check sprinting
+	bobRate = .4;
 	if (keyboard_check(vk_shift)) {
 		movSpd = 2;
+		swing_frequency = .25
 		walkTiming = .25;
+		//bobRate = bobRate*.5
 	}else{
 		movSpd = 1;
+		bobRate = .6;
+		swing_frequency = .2;
 	}
+
 	
 	
 	// get x and y speed
@@ -86,61 +95,76 @@ sprintKey = keyboard_check_pressed(vk_shift)
 	        footstep_sound_is_playing = true;
 	        alarm[2] = room_speed * walkTiming; // Adjust the timing as necessary
 		}
+		// Step event of the player object
+		swing_angle += swing_frequency; // Update the swing angle
+		swing_offset_y = sin(swing_angle) * swing_amplitude;
+		swing_offset_x = sin(swing_angle) * swing_amplitude;
+		if(face == 2){
+			swing_offset_x = -sin(swing_angle) *(swing_amplitude/2);
+		}
+		if(face == 6){
+			swing_offset_x = (sin(swing_angle) *(swing_amplitude/2));
+		}
 		
 	}
 	else
 	{
 		sprite_index = B_sprite[face];	
 		footstep_sound_is_playing = false;
+		bobRate = 1;
+		swing_offset_y = 0;
+		swing_offset_x = 0;
 	}
 	
+
+
+// Sword Control Code ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+if (currentSword != noone){
+	// Get the mouse position
+	var mx = mouse_x;
+	var my = mouse_y;
+
+	// Calculate the angle from the character to the mouse
+	var angle_to_mouse = point_direction(x, y, mx, my);
+
+
+	// Assuming you have a reference to your sword instance stored in a variable 'sword'
+	//var sword = instance_nearest(x, y, oBladeWeapon_Complex);
+	currentSword.depth = sword_depth[face];
 	
-// Sword Control
-// Get the mouse position
-var mx = mouse_x;
-var my = mouse_y;
-
-// Calculate the angle from the character to the mouse
-var angle_to_mouse = point_direction(x, y, mx, my);
 
 
-// Assuming you have a reference to your sword instance stored in a variable 'sword'
-var sword = instance_nearest(x, y, oSword);
-if(face < 0 || face > 4){
-	sword.depth = oPlayer.depth - 1;
-}else{
-	sword.depth = oPlayer.depth + 1;
+	var startOffset = 45;
+	var endOffset = -200;
+	
+
+	if (mouse_check_button_pressed(mb_left)) {
+	    if (!attacking) {
+	        attacking = true;
+			primaryAttack = true;
+			play_swing_sound();
+			//attack_angle_start = point_direction(x, y, mouse_x, mouse_y) + startOffset; // Starting angle 45 degrees behind the mouse direction
+			//attack_angle_end = attack_angle_start + endOffset; // Creates a 90-degree arc
+	
+			//show_debug_message("Attack started. Angle start: " + string(attack_angle_start) + ", Angle end: " + string(attack_angle_end));
+	    }
+		} else {
+			//show_debug_message("Already attacking.");
+		}
+	if (mouse_check_button_pressed(mb_right)) {
+	    if (!attacking) {
+	        // Your code for what happens when the left mouse button is pressed goes here        
+			attacking = true;
+			secondaryAttack = true;
+			secondaryAngleStart = point_direction(x, y, mouse_x, mouse_y)// + startOffset; // Starting angle 45 degrees behind the mouse direction
+			//attack_angle_end = attack_angle_start + endOffset; // Creates a 90-degree arc
+			//show_debug_message("Attack started. Angle start: " + string(attack_angle_start) + ", Angle end: " + string(attack_angle_end));
+	    }
+		} else {
+			//show_debug_message("Already attacking.");
+		}
 }
 
-var startOffset = 45;
-var endOffset = -200;
-
-if (mouse_check_button_pressed(mb_left)) {
-    if (!attacking) {
-        attacking = true;
-		primaryAttack = true;
-		play_swing_sound();
-		//attack_angle_start = point_direction(x, y, mouse_x, mouse_y) + startOffset; // Starting angle 45 degrees behind the mouse direction
-		//attack_angle_end = attack_angle_start + endOffset; // Creates a 90-degree arc
-	
-		//show_debug_message("Attack started. Angle start: " + string(attack_angle_start) + ", Angle end: " + string(attack_angle_end));
-    }
-	} else {
-		//show_debug_message("Already attacking.");
-	}
-if (mouse_check_button_pressed(mb_right)) {
-    if (!attacking) {
-        // Your code for what happens when the left mouse button is pressed goes here        
-		attacking = true;
-		secondaryAttack = true;
-		secondaryAngleStart = point_direction(x, y, mouse_x, mouse_y)// + startOffset; // Starting angle 45 degrees behind the mouse direction
-		//attack_angle_end = attack_angle_start + endOffset; // Creates a 90-degree arc
-		//show_debug_message("Attack started. Angle start: " + string(attack_angle_start) + ", Angle end: " + string(attack_angle_end));
-    }
-	} else {
-		//show_debug_message("Already attacking.");
-	}
-	
 // clamp our stats for each step 
 // note we also should modulate these numbers!
 
@@ -148,5 +172,14 @@ charHealth = clamp(charHealth, 0, max_health);
 
 armor = clamp(armor,0,100);
 
-
-
+//show_debug_message("Current Armor: " + string(armor));
+if(Control.currentItemPlayerIsTouching != noone){
+	if(place_meeting(x,y,Control.currentItemPlayerIsTouching)){
+		Control.standingOnItem = true;
+	}else{
+		Control.standingOnItem = false;
+		Control.currentItemPlayerIsTouching = noone;
+	}
+}else{
+	Control.standingOnItem = false;
+}
