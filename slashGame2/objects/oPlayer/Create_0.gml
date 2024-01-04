@@ -70,6 +70,22 @@ walkSprite[5] = pWalkDownLeft;
 walkSprite[6] = pWalkDown;
 walkSprite[7] = pWalkDownRight;
 
+
+//hand_sprite stuff
+hand_offset_x = [1,   0,  -7, -7,  -2,  2,  2,  2];
+hand_offset_y = [-17,-17,-17,-15,-14,-17,-17,-17];
+//var playerDepth = depth;
+front = depth - 1;
+back = depth + 1;
+sword_depth = [front, back, back, back, back, front, front, front]
+
+// Create event of the player object
+swing_amplitude = 1; // How far the hand swings (in pixels)
+base_swing_frequency = 0.2
+swing_frequency = base_swing_frequency; // How fast the hand swings
+swing_offset_x = 0;
+swing_offset_y = 0;
+swing_angle = 0;
 // Offsets ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 centerYOffset = -18;
 centerY = y + centerYOffset; //repeat in step event
@@ -149,3 +165,7 @@ global.footstep_toggle = false; // Also ensure this global variable is initializ
 
 fontRed = make_color_rgb(178, 12, 16);
 fontGray = make_color_rgb(85, 85, 85);
+
+//to unequip sword
+currentSword.isEquipped = false;
+currentSword = noone;

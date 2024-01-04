@@ -41,11 +41,13 @@ sprintKey = keyboard_check_pressed(vk_shift)
 	bobRate = .4;
 	if (keyboard_check(vk_shift)) {
 		movSpd = 2;
+		swing_frequency = .25
 		walkTiming = .25;
 		//bobRate = bobRate*.5
 	}else{
 		movSpd = 1;
 		bobRate = .6;
+		swing_frequency = .2;
 	}
 
 	
@@ -93,6 +95,16 @@ sprintKey = keyboard_check_pressed(vk_shift)
 	        footstep_sound_is_playing = true;
 	        alarm[2] = room_speed * walkTiming; // Adjust the timing as necessary
 		}
+		// Step event of the player object
+		swing_angle += swing_frequency; // Update the swing angle
+		swing_offset_y = sin(swing_angle) * swing_amplitude;
+		swing_offset_x = sin(swing_angle) * swing_amplitude;
+		if(face == 2){
+			swing_offset_x = -sin(swing_angle) *(swing_amplitude/2);
+		}
+		if(face == 6){
+			swing_offset_x = (sin(swing_angle) *(swing_amplitude/2));
+		}
 		
 	}
 	else
@@ -100,6 +112,8 @@ sprintKey = keyboard_check_pressed(vk_shift)
 		sprite_index = B_sprite[face];	
 		footstep_sound_is_playing = false;
 		bobRate = 1;
+		swing_offset_y = 0;
+		swing_offset_x = 0;
 	}
 	
 
@@ -115,12 +129,9 @@ if (currentSword != noone){
 
 
 	// Assuming you have a reference to your sword instance stored in a variable 'sword'
-	var sword = instance_nearest(x, y, oBladeWeapon_Complex);
-	if(face < 0 || face > 4){
-		currentSword.depth = oPlayer.depth - 1;
-	}else{
-		currentSword.depth = oPlayer.depth + 1;
-	}
+	//var sword = instance_nearest(x, y, oBladeWeapon_Complex);
+	currentSword.depth = sword_depth[face];
+	
 
 
 	var startOffset = 45;

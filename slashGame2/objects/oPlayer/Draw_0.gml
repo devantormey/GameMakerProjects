@@ -13,11 +13,27 @@
 
 //// Reset to the default shader
 //shader_reset();
+// Calculate hand position
 
 //~~~~~~~~~~~~ Begin Player Draw Code ~~~~~~~~~~~~~~~~~~
 
+if(face <= 2 || face > 6){
+		
+	var hand_x = x + hand_offset_x[face] + swing_offset_x;
+	var hand_y = y + hand_offset_y[face] + swing_offset_y;
+	draw_sprite(pHand, image_index, hand_x, hand_y);
+	draw_self();
+}else{
+	var hand_x = x + hand_offset_x[face] + swing_offset_x;
+	var hand_y = y + hand_offset_y[face] + swing_offset_y;
+	draw_self();
+	draw_sprite(pHand, image_index, hand_x, hand_y);
+}
+
 /// draw the player
-draw_self();
+
+
+
 
 
 

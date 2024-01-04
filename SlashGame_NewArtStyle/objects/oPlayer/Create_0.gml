@@ -43,23 +43,23 @@ arrowHit = false;
 
 // Sprite Control ~~~~~~~~~~~~~~~~~~~~~~~~~~
 face = 0;
-H_sprite[0] = pH_IdleRight;
-H_sprite[1] = pH_IdleUpRight;
-H_sprite[2] = pH_IdleUp;
-H_sprite[3] = pH_IdleUpLeft;
-H_sprite[4] = pH_IdleLeft;
-H_sprite[5] = pH_IdleDownLeft;
-H_sprite[6] = pH_IdleDown;
-H_sprite[7] = pH_IdleDownRight;
+H_sprite[0] = sPlayer_Head;
+H_sprite[1] = sPlayer_Head;
+H_sprite[2] = sPlayer_Head;
+H_sprite[3] = sPlayer_Head;
+H_sprite[4] = sPlayer_Head;
+H_sprite[5] = sPlayer_Head;
+H_sprite[6] = sPlayer_Head;
+H_sprite[7] = sPlayer_Head;
 
-B_sprite[0] = pB_IdleRight;
-B_sprite[1] = pB_IdleUpRight;
-B_sprite[2] = pB_IdleUp;
-B_sprite[3] = pB_IdleUpLeft;
-B_sprite[4] = pB_IdleLeft;
-B_sprite[5] = pB_IdleDownLeft;
-B_sprite[6] = pB_IdleDown;
-B_sprite[7] = pB_IdleDownRight;
+B_sprite[0] = sPlayer_body;
+B_sprite[1] = sPlayer_body;
+B_sprite[2] = sPlayer_body;
+B_sprite[3] = sPlayer_body;
+B_sprite[4] = sPlayer_body;
+B_sprite[5] = sPlayer_body;
+B_sprite[6] = sPlayer_body;
+B_sprite[7] = sPlayer_body;
 
 walkSprite[0] = pWalkRight;
 walkSprite[1] = pWalkUpRight;

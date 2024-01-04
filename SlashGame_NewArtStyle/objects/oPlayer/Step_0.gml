@@ -98,6 +98,11 @@ sprintKey = keyboard_check_pressed(vk_shift)
 	else
 	{
 		sprite_index = B_sprite[face];	
+		if(face > 2 && face < 6){
+			image_xscale = -1;
+		}else{
+			image_xscale = 1;
+		}
 		footstep_sound_is_playing = false;
 		bobRate = 1;
 	}

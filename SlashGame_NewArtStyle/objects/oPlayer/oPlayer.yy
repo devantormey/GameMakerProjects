@@ -36,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "pB_IdleDown",
-    "path": "sprites/pB_IdleDown/pB_IdleDown.yy",
+    "name": "sPlayer_body",
+    "path": "sprites/sPlayer_body/sPlayer_body.yy",
   },
   "spriteMaskId": null,
   "visible": true,

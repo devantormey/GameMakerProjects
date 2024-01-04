@@ -31,7 +31,7 @@ angular_change = clamp(angular_change,-45,45);
 
 // set the draw distance for the sword/player
 var distance_to_sword = 8; // Change this value to what fits your sprite sizes
-var distance_from_player = 15;
+var distance_from_player = 9;
 
 // if we aren't attacking don't swing the sword.
 if(!owner.attacking){

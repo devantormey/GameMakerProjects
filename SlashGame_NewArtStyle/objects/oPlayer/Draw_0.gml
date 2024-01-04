@@ -18,8 +18,10 @@
 
 /// draw the player
 draw_self();
-
-
+var flipHead = 1;
+if(face > 2 && face < 6){
+	flipHead = -1;
+}
 
 // ~~~~~~~~~~~~~ Set the armor and helmet sprite according to the mouse orientation ~~~~~~~~~~~~~~~~~~~
 if (face == 6){
@@ -27,20 +29,22 @@ if (face == 6){
 		draw_sprite(currentArmor_array[face], 0, x, y)
 	}
 
-
-	draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset);
+	
+	//draw_sprite(H_sprite[face], 0, x, y + bobOffset);
+	draw_sprite_ext(H_sprite[face],0,x,y + bobOffset,flipHead,1,0,c_white,1);
 	
 	if(currentHelm != noone){
-		draw_sprite(currentHelm_array[face], 0, x, y + headYoffset + bobOffset);
+		draw_sprite(currentHelm_array[face], 0, x, y + bobOffset);
+		
 	}
 
 
 }
 else {
-	draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset);
+	draw_sprite_ext(H_sprite[face],0,x,y + bobOffset,flipHead,1,0,c_white,1);
 	
 	if(currentHelm != noone){
-		draw_sprite(currentHelm_array[face], 0, x, y + headYoffset + bobOffset);
+		draw_sprite(currentHelm_array[face], 0, x, y+ bobOffset);
 	}
 
 	if(currentArmor != noone){
