@@ -142,7 +142,7 @@ if (currentSword != noone){
 	    if (!attacking) {
 	        attacking = true;
 			primaryAttack = true;
-			play_swing_sound();
+			
 			//attack_angle_start = point_direction(x, y, mouse_x, mouse_y) + startOffset; // Starting angle 45 degrees behind the mouse direction
 			//attack_angle_end = attack_angle_start + endOffset; // Creates a 90-degree arc
 	

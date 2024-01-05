@@ -1,4 +1,7 @@
 // Step event of oSword
+if(owner.charHealth <=0){
+	instance_destroy();
+}
 if(Control.gameOver == true){
 	visible = false;
 	return;
@@ -13,12 +16,12 @@ if(oPlayer.isLooting){return;}
 if (isEquipped == false) {
 	visible = false;
 	//instance_destroy();
-    //solid = false;
+    solid = false;
 	return;
 }
 
 // Mouse angle for drawing the weapon
-var current_mouse_angle = point_direction(x, y + swordYOffset, oCursor.x, oCursor.y);
+var current_mouse_angle = point_direction(x, y + swordYOffset, owner.target.x, owner.target.y);
 
 var angular_change = current_mouse_angle - prev_mouse_angle;
 
@@ -31,9 +34,7 @@ angular_change = (angular_change + 180) mod 360 - 180;
 //clamp the angular change so the swing doesn't get crazy
 angular_change = clamp(angular_change,-45,45);
 
-// set the draw distance for the sword/player
-var distance_to_sword = 8; // Change this value to what fits your sprite sizes
-var distance_from_player = 9;
+
 
 // if we aren't attacking don't swing the sword.
 if(!owner.attacking){
@@ -42,11 +43,23 @@ if(!owner.attacking){
 }
 
 // Set the sword's position
-x = oPlayer.x + sword_offset_x[oPlayer.face]  + lengthdir_x(distance_to_sword, current_mouse_angle);
-y = oPlayer.y + sword_offset_y[oPlayer.face] + lengthdir_y(distance_to_sword, current_mouse_angle);
+x = owner.x + sword_offset_x[owner.face]  + lengthdir_x(distance_to_sword, current_mouse_angle);
+y = owner.y + sword_offset_y[owner.face] + lengthdir_y(distance_to_sword, current_mouse_angle);
+
+if(gotBlocked){
+	gotBlockedCounter--;
+	image_angle += primaryBlockSpeed;
+	if(gotBlockedCounter <= 0){
+		gotBlocked = false;
+		owner.attacking = false;
+		owner.primaryAttack = false;
+		owner.attackFinished = true;
+	}
+	return;
+}
 
 // Check if this sword has an owner and if that owner is using primary attack
-if (owner != noone && owner.attacking && owner.primaryAttack && primaryAttack_counter > 0) {
+if (owner != noone && owner.attacking && owner.primaryAttack && primaryAttack_counter > 0 && !gotBlocked) {
 	if(abs(wpn_speed) > critSpeed){
 		damage = primaryDamage*2;	
 		show_debug_message("Crit Speed Achieved: " + string(wpn_speed))
@@ -80,20 +93,21 @@ if (owner != noone && owner.attacking && owner.primaryAttack && primaryAttack_co
 		//set the damage to 0 in case of accidental collision.
 		damage = 0;
 		
-		//stop the attack flag (this actually might not be necessary as we can just use oPlayer.attacking or oSword.attacking.
+		//stop the attack flag (this actually might not be necessary as we can just use owner.attacking or oSword.attacking.
 		swingingFlag = false;
 		ds_list_clear(line_points);
 		critAcheivedFlag = false;
+		owner.attackFinished = true;
         // Optional other clean up (set angle, trigger "reload" animation etc)
     }	
 }
 
 
 // Check if we have an owner and if that owner is secondary attacking
-if (owner != noone && owner.attacking && owner.secondaryAttack && secondaryAttack_counter > 0) {	
+if (owner != noone && owner.attacking && owner.secondaryAttack && secondaryAttack_counter > 0 && !gotBlocked) {	
 	//show_debug_message("Triggering Swing Animations")
 	damage = 0;
-	blocking = true;
+	swingingFlag = true;
 	// Swing the sword
 	if(firstIterationFlag){
 		//image_angle += 20;
@@ -119,7 +133,7 @@ if (owner != noone && owner.attacking && owner.secondaryAttack && secondaryAttac
         // optionally reset the sword angle or perform any other cleanup here
 		secondaryAttack_counter = 180/secondaryAttack_speed;
 		damage = 0;
-		blocking = false;
+		swingingFlag = false;
 		firstIterationFlag = true;
 		ds_list_clear(line_points);
     }

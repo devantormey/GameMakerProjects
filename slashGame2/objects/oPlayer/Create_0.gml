@@ -167,5 +167,6 @@ fontRed = make_color_rgb(178, 12, 16);
 fontGray = make_color_rgb(85, 85, 85);
 
 //to unequip sword
-currentSword.isEquipped = false;
-currentSword = noone;
+//currentSword.isEquipped = false;
+//currentSword = noone;
+target = oCursor;

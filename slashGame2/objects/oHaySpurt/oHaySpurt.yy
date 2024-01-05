@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oSword",
+  "name": "oHaySpurt",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Weapons",
-    "path": "folders/Objects/Weapons.yy",
+    "name": "Effects",
+    "path": "folders/Objects/Effects.yy",
   },
-  "parentObjectId": {
-    "name": "oBladeWeapon",
-    "path": "objects/oBladeWeapon/oBladeWeapon.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -31,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sIronSword",
-    "path": "sprites/sIronSword/sIronSword.yy",
+    "name": "haySpurt",
+    "path": "sprites/haySpurt/haySpurt.yy",
   },
   "spriteMaskId": null,
   "visible": true,

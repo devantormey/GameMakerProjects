@@ -96,7 +96,7 @@ if(openInv){
 									// just some house keeping, not sure if necessary, but making sure we know the state
 									oPlayer.currentSword.isEquipped = true;
 									oPlayer.currentSword.visible = true;
-									oPlayer.currentSword.solid = true;
+									//oPlayer.currentSword.solid = true;
 									equipFlag = false;
 									}else{
 										equipFlag = true;

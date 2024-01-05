@@ -23,49 +23,72 @@ if(face <= 2 || face > 6){
 	var hand_y = y + hand_offset_y[face] + swing_offset_y;
 	draw_sprite(pHand, image_index, hand_x, hand_y);
 	draw_self();
-}else{
+		// ~~~~~~~~~~~~~ Set the armor and helmet sprite according to the mouse orientation ~~~~~~~~~~~~~~~~~~~
+	if (face == 6){
+		if(currentArmor != noone){
+			draw_sprite(currentArmor_array[face], 0, x, y)
+		}
+
+
+		draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset);
+	
+		if(currentHelm != noone){
+			draw_sprite(currentHelm_array[face], 0, x, y + headYoffset + bobOffset);
+		}
+
+
+	}
+	else {
+		draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset);
+	
+		if(currentHelm != noone){
+			draw_sprite(currentHelm_array[face], 0, x, y + headYoffset + bobOffset);
+		}
+
+		if(currentArmor != noone){
+			draw_sprite(currentArmor_array[face], 0, x, y)
+		}
+	}
+
+
+	
+}
+
+else{
 	var hand_x = x + hand_offset_x[face] + swing_offset_x;
 	var hand_y = y + hand_offset_y[face] + swing_offset_y;
 	draw_self();
-	draw_sprite(pHand, image_index, hand_x, hand_y);
-}
 
-/// draw the player
-
-
-
-
+	// ~~~~~~~~~~~~~ Set the armor and helmet sprite according to the mouse orientation ~~~~~~~~~~~~~~~~~~~
+	if (face == 6){
+		if(currentArmor != noone){
+			draw_sprite(currentArmor_array[face], 0, x, y)
+		}
 
 
-// ~~~~~~~~~~~~~ Set the armor and helmet sprite according to the mouse orientation ~~~~~~~~~~~~~~~~~~~
-if (face == 6){
-	if(currentArmor != noone){
-		draw_sprite(currentArmor_array[face], 0, x, y)
-	}
-
-
-	draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset);
+		draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset);
 	
-	if(currentHelm != noone){
-		draw_sprite(currentHelm_array[face], 0, x, y + headYoffset + bobOffset);
+		if(currentHelm != noone){
+			draw_sprite(currentHelm_array[face], 0, x, y + headYoffset + bobOffset);
+		}
+
+
 	}
-
-
-}
-else {
-	draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset);
+	else {
+		draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset);
 	
-	if(currentHelm != noone){
-		draw_sprite(currentHelm_array[face], 0, x, y + headYoffset + bobOffset);
+		if(currentHelm != noone){
+			draw_sprite(currentHelm_array[face], 0, x, y + headYoffset + bobOffset);
+		}
+
+		if(currentArmor != noone){
+			draw_sprite(currentArmor_array[face], 0, x, y)
+		}
 	}
 
-	if(currentArmor != noone){
-		draw_sprite(currentArmor_array[face], 0, x, y)
+
+		draw_sprite(pHand, image_index, hand_x, hand_y);
 	}
-}
-
-
-
 
 //~~~~~~~~~~~~~~~~~~~~ Player UI Code ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	// Get the camera's top-left corner position

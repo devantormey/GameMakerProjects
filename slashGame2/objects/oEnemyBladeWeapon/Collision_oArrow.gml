@@ -1,4 +1,4 @@
-if (oPlayer.secondaryAttack && blocking){
+if (owner.secondaryAttack && blocking){
 	other.speed = 0;
 	other.visible = false;
 	//var break_angle = other.image_angle
