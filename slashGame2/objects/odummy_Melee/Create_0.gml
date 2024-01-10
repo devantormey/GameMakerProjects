@@ -44,6 +44,9 @@ attackRange = 40;
 startAttack = false;
 attackFinished = false;
 
+attackAimDir = aimDir;
+attackStartImageAngle = aimDir;
 
+attackDelayTime = 100;
 //where the blocking action began at
 secondaryAngleStart = 0;
