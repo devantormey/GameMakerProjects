@@ -23,7 +23,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"df30f09a-2d97-4d51-8d4c-75d99d52e541","blendMode":0,"displayName":"head","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "HeadSprite",
     "path": "folders/Sprites/playerSprites/HeadSprite.yy",
@@ -60,7 +60,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 6,
-    "yorigin": 7,
+    "yorigin": 6,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

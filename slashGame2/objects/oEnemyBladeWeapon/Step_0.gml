@@ -44,6 +44,7 @@ if(!owner.attacking && owner.attackDelay <= 10){
 
 
 if (gotBlocked) {
+	damage = 0;
 	
 	percent += 1/30;
 	//var positionInCurve = ;

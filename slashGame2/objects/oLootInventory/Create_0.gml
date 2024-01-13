@@ -17,7 +17,7 @@ maxNumber_items = 21;
 //// test items
 itemSpawnCount = random_range(0,10);
 
-itemSpawnList = [oIronArmor,oIronAxe,oIronHelm,oSword,oRangerHood,oLeatherArmor,oLeatherHelm];
+itemSpawnList = [oIronArmor,oSimpleClothes,oSimpleClothes,oSimpleClothes,oRangerHood,oLeatherArmor,oLeatherHelm];
 
 if (itemSpawnCount > 0){
 	for(var k = 0; k < itemSpawnCount; k++;){

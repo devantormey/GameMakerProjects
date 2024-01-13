@@ -41,6 +41,9 @@ yspeed = 0;
 // Arrow interaction Variables
 arrowHit = false;
 
+//Enemy Sword interaction variables
+m_already_hit = false;
+
 // Sprite Control ~~~~~~~~~~~~~~~~~~~~~~~~~~
 face = 0;
 H_sprite[0] = pH_IdleRight;
@@ -131,6 +134,22 @@ axe.isEquipped = false;
 //axe.owner = id;
 inventoryArray[1] = axe;
 currentItemCount = 2;
+
+//// make some clothes
+//if (!instance_exists(oSimpleClothes)) {
+//    var _clothes = instance_create_layer(x, y, "Instances", oSimpleClothes);
+//    _clothes.owner = id; // This ensures the sword knows who its owner is
+//}
+
+//currentArmor = _clothes;
+//currentArmor_array = _clothes.ArmorArray;
+
+//currentArmor.isEquiped = true;
+//_clothes.isEquiped = true;
+//inventoryArray[2] = currentArmor;
+
+//currentItemCount++;
+
 
 //looting variables
 	//isLooting = false;

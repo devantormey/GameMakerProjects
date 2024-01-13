@@ -26,6 +26,7 @@
   "height": 50,
   "HTile": false,
   "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"751e4669-7625-4cc4-9ac6-b23a06145c0c","blendMode":0,"displayName":"Layer 4","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cb79d253-2a50-4c5c-9678-39f82b67467b","blendMode":0,"displayName":"Layer 3","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"24ccda47-3876-41fb-801d-5b74c53d0a81","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6565974e-1c80-47e0-a534-309af2c29751","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":55.0,"visible":false,},
