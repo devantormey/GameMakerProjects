@@ -115,6 +115,7 @@
     {"name":"simpleArmor_DownRight","order":2,"path":"sprites/simpleArmor_DownRight/simpleArmor_DownRight.yy",},
     {"name":"simpleArmor_UpRight","order":9,"path":"sprites/simpleArmor_UpRight/simpleArmor_UpRight.yy",},
     {"name":"simpleClothes_inv","order":4,"path":"sprites/simpleClothes_inv/simpleClothes_inv.yy",},
+    {"name":"baseBodyStyleSheet","order":14,"path":"sprites/baseBodyStyleSheet/baseBodyStyleSheet.yy",},
     {"name":"simpleArmor_Up","order":7,"path":"sprites/simpleArmor_Up/simpleArmor_Up.yy",},
     {"name":"snd_arrowBreak_heavy","order":8,"path":"sounds/snd_arrowBreak_heavy/snd_arrowBreak_heavy.yy",},
     {"name":"dirt_grass_mix_TileSet_2","order":3,"path":"tilesets/dirt_grass_mix_TileSet_2/dirt_grass_mix_TileSet_2.yy",},

@@ -1,21 +1,54 @@
 // This is the Draw event for our player
 
 
-// ~~~~~~~~~~~~~~~~~~ This is the shader code ~~~~~~~~~~~~~~~~~~~~~~
-//very unfinished
-////shader enable:
-//// Set the shader
-//shader_set(shd_simpleShadow);
 
-//// Draw the shadow slightly offset below the player
-//var shadowOffsetY = -8; // Adjust this value as needed
-//draw_sprite_ext(sprite_index, image_index, x, y + shadowOffsetY, image_xscale, image_yscale, 45, image_blend, image_alpha);
+if(face < 3 || face > 5){ // we are facing right up right and up
+		
+	var hand_x = x + hand_offset_x[face] + swing_offset_x;
+	var hand_y = y + hand_offset_y[face] + swing_offset_y;
+	
+	draw_sprite(pHand, image_index, hand_x, hand_y);
+	
+	draw_self();
+	
+	if(currentArmor != noone){
+		draw_sprite(currentArmor.ArmorArray[face], 0, x, y);
+		
+	}else{
+		//draw_sprite(clothingArray[face], 0, x, y + clothingOffset); // clothing bottom
+	}
+	
+	draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset); //head middle
+	
+	if(currentHelm != noone){
+		draw_sprite(currentHelm.helmArray[face], 0, x, y + headYoffset + bobOffset);
+	}	
+	
+	//draw_sprite(hairArray[face], 0, x, y + headYoffset + bobOffset); //hair on top
+	
+	
+}else{ // upleft left downleft
+	
+	var hand_x = x + hand_offset_x[face] + swing_offset_x;
+	var hand_y = y + hand_offset_y[face] + swing_offset_y;
+	draw_self();
+		
+	if(currentArmor != noone){
+		draw_sprite(currentArmor.ArmorArray[face], 0, x, y);
+		
+	}else{
+		//draw_sprite(clothingArray[face], 0, x, y + clothingOffset); // clothing bottom
+	}
+		
+	draw_sprite(H_sprite[face], 0, x, y + headYoffset + bobOffset);
+	//draw_sprite(hairArray[face], 0, x, y + headYoffset + bobOffset);
+	if(currentHelm != noone){
+		draw_sprite(currentHelm.helmArray[face], 0, x, y + headYoffset + bobOffset);
+	}
+	draw_sprite(pHand, image_index, hand_x, hand_y);
 
-//// Reset to the default shader
-//shader_reset();
-// Calculate hand position
+}
 
- 
 //~~~~~~~~~~~~~~~~~~~~ Player UI Code ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	// Get the camera's top-left corner position
 	var cam = view_camera[0];

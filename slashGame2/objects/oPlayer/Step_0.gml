@@ -110,7 +110,7 @@ sprintKey = keyboard_check_pressed(vk_shift)
 	else
 	{
 		sprite_index = B_sprite[face];	
-		footstep_sound_is_playing = false;9+
+		footstep_sound_is_playing = false;
 		bobRate = 1;
 		swing_offset_y = 0;
 		swing_offset_x = 0;
@@ -183,3 +183,5 @@ if(Control.currentItemPlayerIsTouching != noone){
 }else{
 	Control.standingOnItem = false;
 }
+
+//depth = -10000;

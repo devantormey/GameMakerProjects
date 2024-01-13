@@ -148,6 +148,7 @@
     {"id":{"name":"simpleArmor_UpRight","path":"sprites/simpleArmor_UpRight/simpleArmor_UpRight.yy",},},
     {"id":{"name":"bWalkDown","path":"sprites/bWalkDown/bWalkDown.yy",},},
     {"id":{"name":"simpleClothes_inv","path":"sprites/simpleClothes_inv/simpleClothes_inv.yy",},},
+    {"id":{"name":"baseBodyStyleSheet","path":"sprites/baseBodyStyleSheet/baseBodyStyleSheet.yy",},},
     {"id":{"name":"simpleArmor_Up","path":"sprites/simpleArmor_Up/simpleArmor_Up.yy",},},
     {"id":{"name":"snd_arrowBreak_heavy","path":"sounds/snd_arrowBreak_heavy/snd_arrowBreak_heavy.yy",},},
     {"id":{"name":"dirt_grass_mix_TileSet_2","path":"tilesets/dirt_grass_mix_TileSet_2/dirt_grass_mix_TileSet_2.yy",},},
@@ -397,8 +398,8 @@
     {"id":{"name":"odummy","path":"objects/odummy/odummy.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"theInn","path":"rooms/theInn/theInn.yy",},},
     {"roomId":{"name":"theForest","path":"rooms/theForest/theForest.yy",},},
+    {"roomId":{"name":"theInn","path":"rooms/theInn/theInn.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "templateType": "game",

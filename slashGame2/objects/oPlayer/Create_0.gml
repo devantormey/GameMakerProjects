@@ -141,6 +141,8 @@ currentItemCount = 2;
 //    _clothes.owner = id; // This ensures the sword knows who its owner is
 //}
 
+clothingOffset = 2;
+
 //currentArmor = _clothes;
 //currentArmor_array = _clothes.ArmorArray;
 
