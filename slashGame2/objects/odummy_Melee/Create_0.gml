@@ -3,7 +3,7 @@
 /// Create Event for objDummy
 
 // Initialize health
-charHealth = 200; // Set the starting health of the dummy
+charHealth = 500; // Set the starting health of the dummy
 m_already_hit = false;
 
 aimDir = 0;
@@ -23,6 +23,9 @@ currentSword.distance_from_player = 14;
 //hand_sprite stuff
 hand_offset_x = [1,   0,  -7, -7,  -2,  2,  2,  2];
 hand_offset_y = [-17,-17,-17,-15,-14,-17,-17,-17];
+
+sword_offset_x = [ -2,  0,  0,  0,  0,  0,  -4,  -3];
+sword_offset_y = [0,0,0,0,0,0,0,0];
 //im gonna zero out these offsets
 //hand_offset_x = hand_offset_x*0;
 //hand_offset_y = hand_offset_y*0;

@@ -48,9 +48,11 @@ previous_distance = distance_to_mouse;
 
 if(distance_to_mouse < max_distance){
 	sprite_index = interactHandleft;
+	handMode = true;
 	image_angle = angle_to_mouse;
 }else{
 	sprite_index = sCursor;
+	handMode = false;
 	image_angle = 0;
 }
 

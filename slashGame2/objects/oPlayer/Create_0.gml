@@ -4,7 +4,7 @@
 
 // Character Stats
 armor = 0;
-charHealth = 200;
+charHealth = 500;
 max_health = 200;
 
 // Game Flags

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if (keyboard_check_pressed(vk_f1)) {
-	instance_create_layer(oPlayer.x + random_range(40,200), oPlayer.y, "Instances", odummy);
+	instance_create_layer(oPlayer.x + random_range(40,200), oPlayer.y, "Instances", oBandit_melee);
 }
 
 if (keyboard_check_pressed(vk_f2)) {

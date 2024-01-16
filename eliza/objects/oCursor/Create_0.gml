@@ -7,3 +7,5 @@ previous_y = y;
 //           right    upright      up         upleft        left      downleft      down      downright
 handOffset = [0,       -5,          -5,         -5,            0,         5,           5,           5 ];
 //handOffset = [0,0,0,0,0,0,0,0];
+
+handMode = false;

@@ -73,31 +73,20 @@ if (gotBlocked) {
 		
         // Reset position, angle, etc., as necessary
     }
+	x = owner.x + owner.sword_offset_x[owner.face];
+	y = owner.y + owner.sword_offset_y[owner.face];
 	return;
 }else{
 	// Set the sword's position
 	 //+ lengthdir_x(distance_to_sword, current_mouse_angle)
 	 //+ lengthdir_y(distance_to_sword, current_mouse_angle)
-	x = owner.x + sword_offset_x[owner.face];
-	y = owner.y + sword_offset_y[owner.face];
+	x = owner.x + owner.sword_offset_x[owner.face];
+	y = owner.y + owner.sword_offset_y[owner.face];
 	
 
 }
 
-//if(gotBlocked){
-//	gotBlockedCounter--;
-//	//image_angle += primaryBlockSpeed;
-//	var slide_x = lengthdir_x(1, current_mouse_angle + 90);
-//    var slide_y = lengthdir_y(1, current_mouse_angle + 90);
-//	x = x- lengthdir_x(2, current_mouse_angle) + slide_x;
-//	y = y - lengthdir_y(2, current_mouse_angle) + slide_y;
-//	if(gotBlockedCounter <= 0){
-//		gotBlocked = false;
-//		owner.attacking = false;
-//		owner.primaryAttack = false;
-//		owner.attackFinished = true;
-//	}
-//	return;
+
 
 // Check if this sword has an owner and if that owner is using primary attack
 if (owner != noone && owner.attacking && owner.primaryAttack && primaryAttack_counter > 0 && !gotBlocked) {

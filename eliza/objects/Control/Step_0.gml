@@ -17,3 +17,9 @@ if(gameOver == true ){
 }
 
 if(gamePaused || lootingChest ){window_set_cursor(cr_handpoint);}else{window_set_cursor(cr_none);}
+
+
+if(notHome && keyboard_check_pressed(vk_escape) ){
+		room_goto(Room1)
+		notHome = false;
+	}

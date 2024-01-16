@@ -12,4 +12,8 @@ global.footstep_toggle = true;
 lootingChest = noone;
 isLootingChest = false;
 
+notHome = false;
+
 light_surface = surface_create(room_width, room_height);
+
+persistent = true;
