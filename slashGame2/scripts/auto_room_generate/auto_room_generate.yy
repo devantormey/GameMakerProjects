@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "slashGame2",
-    "path": "slashGame2.yyp",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }

@@ -28,6 +28,8 @@ if (owner.attacking && owner.primaryAttack && other.blocking && !gotBlocked){
 	
 	instance_create_depth(tip_x, tip_y, oPlayer.depth - 5, oSpark);
 	
+	other.secondaryAttack_counter = 3;
+	
 }
 
 

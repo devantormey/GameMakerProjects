@@ -11,7 +11,7 @@ swordYOffset = -14;
 maxAngularChange = 10;
 
 sword_offset_x = [ -2,  0,  0,  0,  0,  0,  -4,  -3];
-sword_offset_y = [0,0,0,0,0,0,0,0];
+sword_offset_y = [-14,-14,-14,-14,-14,-16,-15,-14];
 //swingCountTimer = 0;
 
 primaryAttack_speed = 10;
@@ -21,7 +21,7 @@ primaryBlockSpeed = 15;
 secondaryAttack_counter = 180/secondaryAttack_speed;
 
 // set the draw distance for the sword/player
-distance_to_sword = 14; // Change this value to what fits your sprite sizes
+distance_to_sword = 8; // Change this value to what fits your sprite sizes
 distance_from_player = 9;
 
 primaryDamage = 50;
@@ -40,7 +40,7 @@ prev_mouse_angle = point_direction(x, y, mouse_x, mouse_y);
 
 name = "Bladed Weapon";
 visible = true;
-solid = true;
+//solid = true;
 
 // Weapon effects variables
 gotBlocked = false;

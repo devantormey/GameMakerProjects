@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if(Control.notHome){return;}
 //get inputs
 upKey = keyboard_check(ord("W"));
 leftKey = keyboard_check(ord("A"));

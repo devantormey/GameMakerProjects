@@ -69,6 +69,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"IronSword","folderPath":"folders/Sprites/Weapons/IronSword.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"oldTiles","folderPath":"folders/Tile Sets/oldTiles.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Scripts.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dialogue","folderPath":"folders/Objects/Dialogue.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"tileSet.zip","CopyToMask":-1,"filePath":"datafiles",},
@@ -124,6 +126,7 @@
     {"id":{"name":"evergreenTree","path":"sprites/evergreenTree/evergreenTree.yy",},},
     {"id":{"name":"dirtTileSet","path":"tilesets/dirtTileSet/dirtTileSet.yy",},},
     {"id":{"name":"samSit147","path":"sprites/samSit147/samSit147.yy",},},
+    {"id":{"name":"Dialogue","path":"scripts/Dialogue/Dialogue.yy",},},
     {"id":{"name":"barguy_generated","path":"sprites/barguy_generated/barguy_generated.yy",},},
     {"id":{"name":"newGrass","path":"sprites/newGrass/newGrass.yy",},},
     {"id":{"name":"bB_IdleDown","path":"sprites/bB_IdleDown/bB_IdleDown.yy",},},

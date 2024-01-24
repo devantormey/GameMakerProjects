@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sWallPhoto",
-    "path": "sprites/sWallPhoto/sWallPhoto.yy",
+    "name": "sWallPhotoBromo",
+    "path": "sprites/sWallPhotoBromo/sWallPhotoBromo.yy",
   },
   "spriteMaskId": null,
   "visible": true,

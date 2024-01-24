@@ -72,6 +72,16 @@ hairArray[5] = pHair_IdleDownLeft;
 hairArray[6] = pHair_IdleDown;
 hairArray[7] = pHair_IdleDownRight;
 
+hatArray[0] = pHat_IdleRight;
+hatArray[1] = pHat_IdleUpRight;
+hatArray[2] = pHat_IdleUp;
+hatArray[3] = pHat_IdleUpLeft;
+hatArray[4] = pHat_IdleLeft;
+hatArray[5] = pHat_IdleDownLeft;
+hatArray[6] = pHat_IdleDown;
+hatArray[7] = pHat_IdleDownRight;
+
+
 
 headYoffset = -24;
 clothingOffset = -8;
@@ -92,3 +102,5 @@ if (!instance_exists(oCursor)) {
     var cursor = instance_create_layer(mouse_x, mouse_y, "Instances", oCursor);
     cursor.owner = id; // This ensures the sword knows who its owner is
 }
+
+persistent = true;

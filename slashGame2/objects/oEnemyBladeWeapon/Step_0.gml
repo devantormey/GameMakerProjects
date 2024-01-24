@@ -73,15 +73,15 @@ if (gotBlocked) {
 		
         // Reset position, angle, etc., as necessary
     }
-	x = owner.x + owner.sword_offset_x[owner.face];
-	y = owner.y + owner.sword_offset_y[owner.face];
+	x = owner.x + owner.sword_offset_x[owner.face]  + lengthdir_x(distance_to_sword, current_mouse_angle);
+	y = owner.y + owner.sword_offset_y[owner.face]  + lengthdir_y(distance_to_sword, current_mouse_angle);
 	return;
 }else{
 	// Set the sword's position
 	 //+ lengthdir_x(distance_to_sword, current_mouse_angle)
 	 //+ lengthdir_y(distance_to_sword, current_mouse_angle)
-	x = owner.x + owner.sword_offset_x[owner.face];
-	y = owner.y + owner.sword_offset_y[owner.face];
+	x = owner.x + owner.sword_offset_x[owner.face]  + lengthdir_x(distance_to_sword, current_mouse_angle);
+	y = owner.y + owner.sword_offset_y[owner.face]  + lengthdir_y(distance_to_sword, current_mouse_angle);
 	
 
 }

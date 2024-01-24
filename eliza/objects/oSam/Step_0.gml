@@ -1,15 +1,25 @@
 /// @description Insert description here
 // You can write your code in this editor
+var _target = noone;
+
+if(oFoodBowl.noFood){
+	_target = oPlayer;
+	// Define the distance thresholds
+	var startMovingDistance = 120; // Distance at which the dog starts moving towards the player
+	var stopMovingDistance = 60;  // Distance at which the dog stops moving
+
+}else{
+	_target = oFoodBowl;
+	// Define the distance thresholds
+	var startMovingDistance = 120; // Distance at which the dog starts moving towards the player
+	var stopMovingDistance = 3;  // Distance at which the dog stops moving
+}
 
 
-// Define the distance thresholds
-var startMovingDistance = 120; // Distance at which the dog starts moving towards the player
-var stopMovingDistance = 60;  // Distance at which the dog stops moving
-
-movDir = point_direction(x, y, oPlayer.x, oPlayer.y);
+movDir = point_direction(x, y, _target.x, _target.y);
 movSpd = 0.8;
 
-var distanceToPlayer = point_distance(x, y, oPlayer.x, oPlayer.y);
+var distanceToPlayer = point_distance(x, y, _target.x, _target.y);
 
 // Determine movement speed based on distance
 if (distanceToPlayer > startMovingDistance) {
@@ -24,7 +34,12 @@ if (distanceToPlayer > startMovingDistance) {
     // Close enough to stop
     movSpd = 0;
 	moveDelay = 10;
+	if(!oFoodBowl.noFood){
+		oFoodBowl.noFood = true;		
+		instance_create_layer(oFoodBowl.x, oFoodBowl.y, "Instances", oFoodCrunch);
+	}
 }
+
 
 // Calculate movement
 xSpeed = lengthdir_x(movSpd, movDir);

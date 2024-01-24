@@ -12,12 +12,12 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "eliza",
-    "path": "eliza.yyp",
+    "name": "Tile Sets",
+    "path": "folders/Tile Sets.yy",
   },
   "spriteId": {
-    "name": "Sprite14",
-    "path": "sprites/Sprite14/Sprite14.yy",
+    "name": "grassSprite",
+    "path": "sprites/grassSprite/grassSprite.yy",
   },
   "spriteNoExport": false,
   "textureGroupId": {

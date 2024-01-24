@@ -62,5 +62,5 @@ if(oPlayer.face > 0 && oPlayer.face < 4)
 {
 	depth = oPlayer.depth + 3;
 }else{
-	depth = oPlayer.depth - 3;
+	depth = oPlayer.depth - 20;
 }

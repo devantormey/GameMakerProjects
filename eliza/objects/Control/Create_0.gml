@@ -17,3 +17,7 @@ notHome = false;
 light_surface = surface_create(room_width, room_height);
 
 persistent = true;
+
+sound1 = noone;
+sound2 = noone;
+cursorRoom = false;

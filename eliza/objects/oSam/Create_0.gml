@@ -15,3 +15,5 @@ flipDelay = 10;
 
 isPettable = false;
 isPetting = false;
+
+//persistent = true;
