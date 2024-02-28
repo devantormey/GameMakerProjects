@@ -19,3 +19,9 @@ if(isTalkable && keyboard_check_pressed(ord("F")) ){
 	_dialogueBox.owner = id;
 }
 
+if(isTalking){
+	var cam = view_camera[0];
+	var cam_x = camera_get_view_x(cam);
+	var cam_y = camera_get_view_y(cam);
+	//draw_sprite(portrait, 0, cam_x + portrait_offset_x, cam_y + portrait_offset_y);
+}

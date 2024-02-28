@@ -74,3 +74,10 @@ if place_meeting(x, y + lengthdir_y(velocity,movDir), oWall)
 
 x+= xSpeed;
 y+= ySpeed;
+
+if( keyboard_check(ord("W"))  &&  velocity > 0){
+	audio_sound_gain(carNoise,.4,0);
+}
+if(velocity < .2 ){
+	audio_sound_gain(carNoise,0,0);
+}

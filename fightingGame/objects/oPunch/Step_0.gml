@@ -1,8 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = oPlayer.x;
-y = oPlayer.y - oPlayer.centerYOffset - 3; 
+if(startFlag){
+
+depth = owner.depth - 10;
+image_xscale = owner.image_xscale;
+startFlag = false;
+}
+
+x = owner.x;
+y = owner.y - owner.centerYOffset - 3; 
 
 if(image_index > 3){
 	if(colliderFlag){

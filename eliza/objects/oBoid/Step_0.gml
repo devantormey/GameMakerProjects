@@ -112,7 +112,7 @@ if(_friends_count > 5){
 var splashHappen = noone;
 if(instance_exists(oRipple)){
 	splashHappen = instance_nearest(x,y,oRipple);
-	if(distance_to_object(splashHappen) < 100){
+	if(distance_to_object(splashHappen) < 10){
 		var _goto_dir = point_direction(splashHappen.x,splashHappen.y,x,y)
 		speed = 2;
 		//move to average ange
@@ -126,23 +126,23 @@ if(instance_exists(oRipple)){
 	}
 }
 
-//if food run towards!!
-var foodPellet = noone;
-if(instance_exists(oFood)){
-	foodPellet = instance_nearest(x,y,oFood);
-	if(distance_to_object(foodPellet) < 200){
-		var _goto_dir = point_direction(x,y,foodPellet.x,foodPellet.y)
-		speed = 2;
-		//move to average ange
-		if(angle_difference(direction,_goto_dir) > 0){
-			direction -= angle_change_speed*3;
-		}else{
-			direction += angle_change_speed*3;
-		}
-	}else{
-		speed = 1;
-	}
-}
+////if food run towards!!
+//var foodPellet = noone;
+//if(instance_exists(oFood)){
+//	foodPellet = instance_nearest(x,y,oFood);
+//	if(distance_to_object(foodPellet) < 200){
+//		var _goto_dir = point_direction(x,y,foodPellet.x,foodPellet.y)
+//		speed = 2;
+//		//move to average ange
+//		if(angle_difference(direction,_goto_dir) > 0){
+//			direction -= angle_change_speed*3;
+//		}else{
+//			direction += angle_change_speed*3;
+//		}
+//	}else{
+//		speed = 1;
+//	}
+//}
 
 //set angle
 image_angle = direction - 90;

@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sWallPhotoWaimea",
-    "path": "sprites/sWallPhotoWaimea/sWallPhotoWaimea.yy",
+    "name": "sWallPhotoSeattle",
+    "path": "sprites/sWallPhotoSeattle/sWallPhotoSeattle.yy",
   },
   "spriteMaskId": null,
   "visible": true,
