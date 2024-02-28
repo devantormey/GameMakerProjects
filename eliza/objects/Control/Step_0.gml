@@ -24,9 +24,18 @@ if(notHome && keyboard_check_pressed(vk_escape) ){
 		notHome = false;
 		window_set_cursor(cr_none);
 		cursorRoom = false;
+		leftHouseCount ++;
+		
+		switch(leftHouseCount){
+			case 1:
+				show_debug_message("setting the string index for our second message")
+				oNarrator.currentStringIndex = 1;
+				oNarrator.alarm[0] = room_speed * 1;
+		}
 	}
 	
-if(!notHome){
+if(!notHome && notTitle){
+	//oNarrator.displayText = false;
 	if(sound1 != noone){
 		audio_stop_sound(sound1);
 		sound1 = noone;
@@ -38,5 +47,9 @@ if(!notHome){
 }
 
 if(cursorRoom){
+	window_set_cursor(cr_handpoint);
+}
+
+if(!notTitle){
 	window_set_cursor(cr_handpoint);
 }

@@ -40,3 +40,18 @@ if (place_meeting(x, y, oPunchCollider)) {
 		xspeed -= oPunch.impact;
 	}
 }	
+
+if (place_meeting(x, y, oMagicBall)) {	
+		if(oMagicBall.owner != id && oMagicBall.firstHit_id != id){
+			//xspeed = 0;
+			oMagicBall.firstHit_id = id;
+		   show_debug_message("we got hit  -from player1")
+		   if(oMagicBall.x < x){
+				xspeed += oMagicBall.impact;
+			}
+			if(oMagicBall.x  > x){
+				xspeed -= oMagicBall.impact;
+			}
+			
+		}
+}

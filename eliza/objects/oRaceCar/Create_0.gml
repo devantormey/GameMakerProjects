@@ -14,3 +14,8 @@ maxSpeed = 4;
 turnRate = 2;
 
 desired_direction = movDir;
+
+carSFX = toyCarSound_short;
+
+carNoise = audio_play_sound(carSFX, 1, true, 0);
+

@@ -3,6 +3,8 @@
 
 
 owner = noone;
-
+_dialogue = noone
+responseOffsetX = 0;
+responseOffsetY = 69;
 
 
