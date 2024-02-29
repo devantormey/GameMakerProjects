@@ -1,23 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited()
 
-displayText = false;
-displayResponse = false;
+mainDialogueList = ds_list_create();
 
-barmanDialogueList = ds_list_create();
 
-responseList = ds_list_create();
-firstReplyOption = ds_list_create();
 
-ds_list_add(barmanDialogueList ,"Hello... Wait why are you naked?")
-ds_list_add(barmanDialogueList ,"What do you need?")
+ds_list_add(mainDialogueList ,"huh... what do you want?") //0
+ds_list_add(mainDialogueList ,"Oh dang bro I thought you were gonna mess \n up my stuff!") //1
+ds_list_add(mainDialogueList ,"Meditation, spacetime shit bro. \n Need something?") //2
+ds_list_add(mainDialogueList ,"Nothing right now, gotta break through") //3
+ds_list_add(mainDialogueList ,"I got Nothing for you, gotta break \n through my mind prism and explore my space powers") //4
 
-ds_list_add(firstReplyOption ,"Yes")
-ds_list_add(firstReplyOption ,"No")
+firstReplyOption = "1. Dunno, who are you?"
+secondReplyOption = "2. What Are you doing?"
 
-responseListIndex = 0;
+//responseListIndex = 0;
 
-ds_list_add(responseList ,firstReplyOption)
+//ds_list_add(responseList ,replyOptions)
 
 hasResponse = true;
 
@@ -28,7 +28,7 @@ if(hasResponse){
  
 
 currentStringIndex = 0;
-textToDisplay = ds_list_find_value(barmanDialogueList,currentStringIndex);
+textToDisplay = ds_list_find_value(mainDialogueList,currentStringIndex);
 
 currentText = "";
 textIndex = 0;
@@ -36,8 +36,19 @@ textSpeed = 1; // How fast the text appears (characters per step)
 
 //textDelay = 5
 
-currentResponseList = ds_list_find_value(responseList,responseListIndex);
-numResponse = ds_list_size(currentResponseList);
+//currentResponseList = ds_list_find_value(responseList,responseListIndex);
+numResponse = 2;
 
-owner = noone;
+responseX = 0;
+responseY = 0;
 //alarm[0] = room_speed * .1;
+
+
+//doing some unique object testing
+test_unique = 0;
+
+dialogueStage = 0;
+
+transitionDialogue = false;
+transitionCount = 0;
+responseChoice = 0;

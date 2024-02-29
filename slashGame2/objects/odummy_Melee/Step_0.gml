@@ -36,7 +36,7 @@ if(attackFinished && distance_to_object(oPlayer)<attackRange){
 
 //}
 
-show_debug_message("startAttack: " + string(startAttack));
-show_debug_message("attacking: " + string(attacking));
-show_debug_message("primaryAttack: " + string(primaryAttack));
-show_debug_message("attackFinished: " + string(attackFinished));
+//show_debug_message("startAttack: " + string(startAttack));
+//show_debug_message("attacking: " + string(attacking));
+//show_debug_message("primaryAttack: " + string(primaryAttack));
+//show_debug_message("attackFinished: " + string(attackFinished));

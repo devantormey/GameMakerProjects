@@ -12,8 +12,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "TheInn",
-    "path": "folders/Objects/TheInn.yy",
+    "name": "Friendlies",
+    "path": "folders/Objects/Friendlies.yy",
   },
   "parentObjectId": {
     "name": "oBarman",

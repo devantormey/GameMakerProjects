@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oWoodsmanDialogue",
+  "name": "oBarmanDialogue_backup",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -11,13 +11,10 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Friendlies",
-    "path": "folders/Objects/Friendlies.yy",
+    "name": "TheInn",
+    "path": "folders/Objects/TheInn.yy",
   },
-  "parentObjectId": {
-    "name": "oBarmanDialogue",
-    "path": "objects/oBarmanDialogue/oBarmanDialogue.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

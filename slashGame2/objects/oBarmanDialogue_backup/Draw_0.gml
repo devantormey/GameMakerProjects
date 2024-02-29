@@ -12,19 +12,11 @@ if (displayText) {
     draw_text(_diag_box_x + 10, _diag_box_y + 33, currentText);
 	
 	if(hasResponse){
-		switch(numResponse){
-			case 1:
-				draw_text(responseX, responseY + 0, firstReplyOption);
-			case 2:
-				draw_text(responseX, responseY + 0, firstReplyOption);
-				draw_text(responseX, responseY + 30, secondReplyOption);
-		}
-		
-		//for (var i = 0; i < numResponse; i += 1){
-		//	var _current_response_text = ds_list_find_value(currentResponseList,i);
-		//	draw_text(responseX, responseY + i*30, _current_response_text);
+		for (var i = 0; i < numResponse; i += 1){
+			var _current_response_text = ds_list_find_value(currentResponseList,i);
+			draw_text(responseX, responseY + i*30, _current_response_text);
 			
-		//}
+		}
 	}
 	//show_debug_message("Unique Dialogue ID = " + string(test_unique) )	
 }

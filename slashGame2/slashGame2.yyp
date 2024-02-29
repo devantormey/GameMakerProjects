@@ -133,6 +133,7 @@
     {"id":{"name":"barguy_generated","path":"sprites/barguy_generated/barguy_generated.yy",},},
     {"id":{"name":"newGrass","path":"sprites/newGrass/newGrass.yy",},},
     {"id":{"name":"bB_IdleDown","path":"sprites/bB_IdleDown/bB_IdleDown.yy",},},
+    {"id":{"name":"oBarmanDialogue_backup","path":"objects/oBarmanDialogue_backup/oBarmanDialogue_backup.yy",},},
     {"id":{"name":"bWalkUpLeft","path":"sprites/bWalkUpLeft/bWalkUpLeft.yy",},},
     {"id":{"name":"LeatherHelm_UpLeft","path":"sprites/LeatherHelm_UpLeft/LeatherHelm_UpLeft.yy",},},
     {"id":{"name":"sIndicator218","path":"sprites/sIndicator218/sIndicator218.yy",},},
