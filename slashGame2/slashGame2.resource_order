@@ -326,6 +326,7 @@
     {"name":"rotatedaxe98","order":4,"path":"sprites/rotatedaxe98/rotatedaxe98.yy",},
     {"name":"oSword","order":4,"path":"objects/oSword/oSword.yy",},
     {"name":"leatherArmor_Right","order":6,"path":"sprites/leatherArmor_Right/leatherArmor_Right.yy",},
+    {"name":"sBarmanPortrait223","order":5,"path":"sprites/sBarmanPortrait223/sBarmanPortrait223.yy",},
     {"name":"mug1","order":8,"path":"sprites/mug1/mug1.yy",},
     {"name":"pB_IdleDownLeft","order":1,"path":"sprites/pB_IdleDownLeft/pB_IdleDownLeft.yy",},
     {"name":"ironAxe_equip","order":1,"path":"sprites/ironAxe_equip/ironAxe_equip.yy",},

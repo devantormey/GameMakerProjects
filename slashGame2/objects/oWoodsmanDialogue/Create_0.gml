@@ -10,7 +10,7 @@ ds_list_add(mainDialogueList ,"huh... what do you want?") //0
 ds_list_add(mainDialogueList ,"Oh dang bro I thought you were gonna mess \n up my stuff!") //1
 ds_list_add(mainDialogueList ,"Meditation, spacetime shit bro. \n Need something?") //2
 ds_list_add(mainDialogueList ,"Nothing right now, gotta break through") //3
-ds_list_add(mainDialogueList ,"I got Nothing for you, gotta break \n through my mind prism and explore my space powers") //4
+ds_list_add(mainDialogueList ,"I got Nothing for you, gotta break through my \n mind prison and explore my space powers") //4
 
 firstReplyOption = "1. Dunno, who are you?"
 secondReplyOption = "2. What Are you doing?"
