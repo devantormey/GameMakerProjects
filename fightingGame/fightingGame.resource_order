@@ -34,6 +34,7 @@
     {"name":"sRunning","order":1,"path":"sprites/sRunning/sRunning.yy",},
     {"name":"sBall","order":29,"path":"sprites/sBall/sBall.yy",},
     {"name":"oPlayer1","order":1,"path":"objects/oPlayer1/oPlayer1.yy",},
+    {"name":"sJumping_POWERFUL","order":35,"path":"sprites/sJumping_POWERFUL/sJumping_POWERFUL.yy",},
     {"name":"sCastSpell","order":30,"path":"sprites/sCastSpell/sCastSpell.yy",},
     {"name":"mountainMap","order":13,"path":"sprites/mountainMap/mountainMap.yy",},
     {"name":"sJumping_p2","order":25,"path":"sprites/sJumping_p2/sJumping_p2.yy",},

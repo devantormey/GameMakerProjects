@@ -52,6 +52,7 @@
     {"id":{"name":"sRunning","path":"sprites/sRunning/sRunning.yy",},},
     {"id":{"name":"sBall","path":"sprites/sBall/sBall.yy",},},
     {"id":{"name":"oPlayer1","path":"objects/oPlayer1/oPlayer1.yy",},},
+    {"id":{"name":"sJumping_POWERFUL","path":"sprites/sJumping_POWERFUL/sJumping_POWERFUL.yy",},},
     {"id":{"name":"sCastSpell","path":"sprites/sCastSpell/sCastSpell.yy",},},
     {"id":{"name":"mountainMap","path":"sprites/mountainMap/mountainMap.yy",},},
     {"id":{"name":"sJumping_p2","path":"sprites/sJumping_p2/sJumping_p2.yy",},},

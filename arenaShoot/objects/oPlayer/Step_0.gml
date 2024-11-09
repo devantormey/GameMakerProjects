@@ -82,11 +82,21 @@ sprintKey = keyboard_check_pressed(vk_shift)
 			yspeed = 0;
 		}
 	}
-	if(xspeed >= maxSpeed){
-		xspeed = maxSpeed;
+	if(abs(xspeed) >= maxSpeed){
+		if(xspeed > 0){
+			xspeed = maxSpeed;
+		}
+		if(xspeed < 0){
+			xspeed = -maxSpeed;
+		}
 	}
-	if(yspeed >= maxSpeed){
-		yspeed = maxSpeed;
+	if(abs(yspeed) >= maxSpeed){
+		if(yspeed > 0){
+			yspeed = maxSpeed;
+		}
+		if(yspeed < 0){
+			yspeed = -maxSpeed;
+		}
 	}
 	
 	
@@ -125,6 +135,17 @@ if(mouse_check_button_pressed(shootKey) && noShield){
     newProjectile.direction = aimDir; // or any direction you want
 	newProjectile.image_angle = aimDir;
     newProjectile.speed = 10; // or any speed you want
+	
+	// Before applying recoil
+	show_debug_message("Before Recoil: xspeed = " + string(xspeed) + ", yspeed = " + string(yspeed));
+
+	// Apply recoil force
+	_spd = accel * recoil;
+	xspeed += lengthdir_x(_spd, aimDir + 180);
+	yspeed += lengthdir_y(_spd, aimDir + 180);
+
+	// After applying recoil
+	show_debug_message("After Recoil: xspeed = " + string(xspeed) + ", yspeed = " + string(yspeed));
 }
 if(mouse_check_button_pressed(blockKey)){
 	//create bullet

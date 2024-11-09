@@ -6,6 +6,7 @@
 armor = 0;
 charHealth = 200;
 max_health = 200;
+recoil = 50;
 
 // Game Flags
 gameOverFlag = false;
@@ -29,8 +30,8 @@ movDir = 0;
 movSpd = 1;
 
 velocity = 0;
-accel = 0.1;
-decel = .06;
+accel = 0.2;
+decel = .09;
 maxSpeed = 4;
 
 xspeed = 0;
